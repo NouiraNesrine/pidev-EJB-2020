@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!-- Mirrored from www.primefaces.org/ecuador/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2019 16:29:05 GMT -->
+<!-- Added by HTTrack -->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/template.xhtml">
+
+	<ui:param name="page_name" value="Accueil" />
+	<ui:define name="content">
+		<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<!-- /Added by HTTrack -->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link type="text/css" rel="stylesheet"
+	href="../javax.faces.resource/theme.cssd432.css?ln=primefaces-ecuador-amber" />
+<link type="text/css" rel="stylesheet"
+	href="../javax.faces.resource/fa/font-awesome.css408e.css?ln=primefaces&amp;v=6.2" />
+<link type="text/css" rel="stylesheet"
+	href="../javax.faces.resource/components.css.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259408e.css?ln=primefaces&amp;v=6.2" />
+<script type="text/javascript"
+	src="../javax.faces.resource/jquery/jquery.js.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259408e.node0?ln=primefaces&amp;v=6.2"></script>
+<script type="text/javascript"
+	src="../javax.faces.resource/jquery/jquery-plugins.js.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259408e.node0?ln=primefaces&amp;v=6.2"></script>
+<script type="text/javascript"
+	src="../javax.faces.resource/core.js.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259408e.node0?ln=primefaces&amp;v=6.2"></script>
+<script type="text/javascript"
+	src="../javax.faces.resource/components.js.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259408e.node0?ln=primefaces&amp;v=6.2"></script>
+<link type="text/css" rel="stylesheet"
+	href="../javax.faces.resource/schedule/schedule.css.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259408e.css?ln=primefaces&amp;v=6.2" />
+<script type="text/javascript"
+	src="../javax.faces.resource/moment/moment.js.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259408e.node0?ln=primefaces&amp;v=6.2"></script>
+<script type="text/javascript"
+	src="../javax.faces.resource/schedule/schedule.js.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259408e.node0?ln=primefaces&amp;v=6.2"></script>
+<link type="text/css" rel="stylesheet"
+	href="../javax.faces.resource/css/nanoscroller.css.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw43425960d1.css?ln=ecuador-layout" />
+<link type="text/css" rel="stylesheet"
+	href="../javax.faces.resource/css/layout-amber.css.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw43425960d1.css?ln=ecuador-layout" />
+<script type="text/javascript">
+	if (window.PrimeFaces) {
+		PrimeFaces.settings.locale = 'en_US';
+		PrimeFaces.settings.projectStage = 'Development';
+	}
+</script>
+
+<title>Manager Space</title>
+<script type="text/javascript"
+	src="../javax.faces.resource/js/nanoscroller.js.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw43425960d1.node0?ln=ecuador-layout"></script>
+<script type="text/javascript"
+	src="../javax.faces.resource/js/layout.js.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw43425960d1.node0?ln=ecuador-layout"></script>
+		</head>
+		<body>
+
+			<div class="layout-wrapper layout-menu-static ">
+
+				<div class="layout-topbar">
+					<a href="#" id="topbar-menu-button"> <i
+						class="fa fa-angle-left arrow" /> <i
+						class="fa fa-angle-up mobile" />
+					</a> <a
+						href="dashboard.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259.html"
+						class="logo-container"><img id="j_idt13"
+						src="../javax.faces.resource/images/ecuador-logo.png.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw43425960d1.png?ln=ecuador-layout"
+						alt="" /></a> <a id="topbar-profile-menu-button" href="#"> <span>#{loginBean.user.firstname}
+							#{loginBean.user.lastname}</span><i class="fa fa-angle-down"></i>
+					</a>
+					<ul id="topbar-usermenu">
+						<li><a href="#"> <i class="fa fa-fw fa-user"></i> <span
+								class="topbar-item-name">Profile</span> <span
+								class="topbar-submenuitem-badge">4</span>
+						</a></li>
+						<li><h:form>
+
+								<h:commandLink action="#{loginBean.doLogout()}">
+									<i class="fa fa-sign-out" aria-hidden="true"></i> <span
+								class="topbar-item-name">Logout</span>
+								<span
+								class="topbar-submenuitem-badge">#{loginBean.user.idUser}</span>
+								</h:commandLink>
+							</h:form></li>
+
+						<li><a href="#"> <i class="fa fa-fw fa-envelope-o"></i> <span
+								class="topbar-item-name">Messages</span>
+						</a>
+							<ul>
+								<li role="menuitem"><a href="#" class="topbar-message"><img
+										id="j_idt17"
+										src="javax.faces.resource/images/avatar-brooke.png.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw43425960d1.png?ln=ecuador-layout"
+										alt="" width="25" /> <span>Give me a call</span> </a></li>
+								<li role="menuitem"><a href="#" class="topbar-message"><img
+										id="j_idt19"
+										src="javax.faces.resource/images/avatar-tom.png.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw43425960d1.png?ln=ecuador-layout"
+										alt="" width="25" /> <span>Reports attached</span> </a></li>
+								<li role="menuitem"><a href="#" class="topbar-message"><img
+										id="j_idt21"
+										src="javax.faces.resource/images/avatar-maggie.png.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw43425960d1.png?ln=ecuador-layout"
+										alt="" width="25" /> <span>About your invoice</span> </a></li>
+								<li role="menuitem"><a href="#" class="topbar-message"><img
+										id="j_idt23"
+										src="javax.faces.resource/images/avatar-lucas.png.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw43425960d1.png?ln=ecuador-layout"
+										alt="" width="25" /> <span>Meeting today</span> </a></li>
+							</ul></li>
+						<li><a href="#"> <i class="fa fa-fw fa-bell-o"></i> <span
+								class="topbar-item-name">Notifications</span>
+						</a>
+							<ul>
+								<li role="menuitem"><a href="#"> <i
+										class="fa fa-fw fa-tasks"></i> <span>Pending tasks</span>
+								</a></li>
+								<li role="menuitem"><a href="#"> <i
+										class="fa fa-fw fa-calendar-check-o"></i> <span>Meeting
+											today</span>
+								</a></li>
+								<li role="menuitem"><a href="#"> <i
+										class="fa fa-fw fa-download"></i> <span>Download</span>
+								</a></li>
+								<li role="menuitem"><a href="#"> <i
+										class="fa fa-fw fa-plane"></i> <span>Book flight</span>
+								</a></li>
+
+							</ul></li>
+					</ul>
+					<ul id="topbar-usermenu">
+						<li><a id="topbar-profile-menu-button" /> <i
+							class="fa fa-fw fa-envelope-o" /> <span class="topbar-item-name"></span>
+						</li>
+					</ul>
+
+				</div>
+
+
+
+				<div class="layout-sidebar">
+
+					<div class="nano">
+
+						<div class="nano-content menu-scroll-content">
+							<form id="menuform" name="menuform" method="post"
+								action="https://www.primefaces.org/ecuador/dashboard.xhtml;jsessionid=node013qxhk57eqh1xsnvgx566eqw434259.node0"
+								enctype="application/x-www-form-urlencoded">
+								<input type="hidden" name="menuform" value="menuform" />
+
+								<div class="layout-menu-title">MAIN MENU</div>
+								<ul id="menuform:j_idt63" class="layout-menu">
+									<li id="menuform:om_dashboard" role="menuitem"><a
+										href="dashboard.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259.html"><i
+											class="fa fa-fw fa-dashboard fa-fw" /><span>Dashboard</span></a>
+										<div class="layout-menu-tooltip">
+											<div class="layout-menu-tooltip-arrow" />
+											<div class="layout-menu-tooltip-text">Dashboard</div>
+										</div></li>
+									
+									<li id="menuform:om_components" role="menuitem"><a
+										href="#"><i class="fa fa-fw fa-bars fa-fw" /><span>Components</span><i
+											class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+										<div class="layout-menu-tooltip">
+											<div class="layout-menu-tooltip-arrow" />
+											<div class="layout-menu-tooltip-text">Components</div>
+										</div>
+										<ul role="menu">
+											<li id="menuform:om_sample" role="menuitem"><a
+												href="Contrats.xhtml"><i
+													class="fa fa-fw fa-columns fa-fw" /><span>Contrat</span></a>
+												<div class="layout-menu-tooltip">
+													<div class="layout-menu-tooltip-arrow" />
+													<div class="layout-menu-tooltip-text">Sample Page</div>
+												</div></li>
+											<li id="menuform:om_forms" role="menuitem"><a
+												href="forms.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259.html"><i
+													class="fa fa-fw fa-code fa-fw" /><span>Forms</span></a>
+												<div class="layout-menu-tooltip">
+													<div class="layout-menu-tooltip-arrow" />
+													<div class="layout-menu-tooltip-text">Forms</div>
+												</div></li>
+											<li id="menuform:om_data" role="menuitem"><a
+												href="data.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259.html"><i
+													class="fa fa-fw fa-table fa-fw" /><span>Data</span></a>
+												<div class="layout-menu-tooltip">
+													<div class="layout-menu-tooltip-arrow" />
+													<div class="layout-menu-tooltip-text">Data</div>
+												</div></li>
+											<li id="menuform:om_panels" role="menuitem"><a
+												href="panel.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259.html"><i
+													class="fa fa-fw fa-list-alt fa-fw" /><span>Panels</span></a>
+												<div class="layout-menu-tooltip">
+													<div class="layout-menu-tooltip-arrow" />
+													<div class="layout-menu-tooltip-text">Panels</div>
+												</div></li>
+											<li id="menuform:om_overlays" role="menuitem"><a
+												href="overlay.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259.html"><i
+													class="fa fa-fw fa-square fa-fw" /><span>Overlays</span></a>
+												<div class="layout-menu-tooltip">
+													<div class="layout-menu-tooltip-arrow" />
+													<div class="layout-menu-tooltip-text">Overlays</div>
+												</div></li>
+											<li id="menuform:om_menus" role="menuitem"><a
+												href="menu.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259.html"><i
+													class="fa fa-fw fa-minus-square-o fa-fw" /><span>Menus</span></a>
+												<div class="layout-menu-tooltip">
+													<div class="layout-menu-tooltip-arrow" />
+													<div class="layout-menu-tooltip-text">Menus</div>
+												</div></li>
+											<li id="menuform:om_messages" role="menuitem"><a
+												href="messages.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259.html"><i
+													class="fa fa-fw fa-circle-o-notch fa-fw" /><span>Messages</span></a>
+												<div class="layout-menu-tooltip">
+													<div class="layout-menu-tooltip-arrow" />
+													<div class="layout-menu-tooltip-text">Messages</div>
+												</div></li>
+											<li id="menuform:om_charts" role="menuitem"><a
+												href="charts.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259.html"><i
+													class="fa fa-fw fa-area-chart fa-fw" /><span>Charts</span></a>
+												<div class="layout-menu-tooltip">
+													<div class="layout-menu-tooltip-arrow" />
+													<div class="layout-menu-tooltip-text">Charts</div>
+												</div></li>
+											<li id="menuform:om_file" role="menuitem"><a
+												href="file.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259.html"><i
+													class="fa fa-fw fa-arrow-circle-o-up fa-fw" /><span>File</span></a>
+												<div class="layout-menu-tooltip">
+													<div class="layout-menu-tooltip-arrow" />
+													<div class="layout-menu-tooltip-text">File</div>
+												</div></li>
+											<li id="menuform:om_misc" role="menuitem"><a
+												href="misc.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259.html"><i
+													class="fa fa-fw fa-user-secret fa-fw" /><span>Misc</span></a>
+												<div class="layout-menu-tooltip">
+													<div class="layout-menu-tooltip-arrow" />
+													<div class="layout-menu-tooltip-text">Misc</div>
+												</div></li>
+										</ul></li>
+									<li id="menuform:om_default" role="menuitem"><a href="#"><i
+											class="fa fa-fw fa-cube fa-fw" /><span>Pages</span><i
+											class="fa fa-fw layout-submenu-toggler fa-angle-down" /></a>
+										<div class="layout-menu-tooltip">
+											<div class="layout-menu-tooltip-arrow" />
+											<div class="layout-menu-tooltip-text">Pages</div>
+										</div>
+										<ul role="menu">
+											<li id="menuform:om_empty" role="menuitem"><a
+												href="empty.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259.html"><i
+													class="fa fa-fw fa-square-o fa-fw" /><span>Empty</span></a>
+												<div class="layout-menu-tooltip">
+													<div class="layout-menu-tooltip-arrow" />
+													<div class="layout-menu-tooltip-text">Empty</div>
+												</div></li>
+											<li id="menuform:om_login" role="menuitem"><a
+												href="login.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259.html"><i
+													class="fa fa-fw fa-sign-in fa-fw" /><span>Login</span></a>
+												<div class="layout-menu-tooltip">
+													<div class="layout-menu-tooltip-arrow" />
+													<div class="layout-menu-tooltip-text">Login</div>
+												</div></li>
+											<li id="menuform:om_db_landing" role="menuitem"><a
+												href="landing.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259.html"><i
+													class="fa fa-fw fa-certificate fa-fw" /><span>Landing</span></a>
+												<div class="layout-menu-tooltip">
+													<div class="layout-menu-tooltip-arrow" />
+													<div class="layout-menu-tooltip-text">Landing</div>
+												</div></li>
+											<li id="menuform:om_error" role="menuitem"><a
+												href="error.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259.html"><i
+													class="fa fa-fw fa-exclamation-circle fa-fw" /><span>Error</span></a>
+												<div class="layout-menu-tooltip">
+													<div class="layout-menu-tooltip-arrow" />
+													<div class="layout-menu-tooltip-text">Error</div>
+												</div></li>
+											<li id="menuform:om_404" role="menuitem"><a
+												href="404.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259.html"><i
+													class="fa fa-fw fa-times fa-fw" /><span>404</span></a>
+												<div class="layout-menu-tooltip">
+													<div class="layout-menu-tooltip-arrow" />
+													<div class="layout-menu-tooltip-text">404</div>
+												</div></li>
+											<li id="menuform:om_access" role="menuitem"><a
+												href="access.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259.html"><i
+													class="fa fa-fw fa-exclamation-triangle fa-fw" /><span>Access
+														Denied</span></a>
+												<div class="layout-menu-tooltip">
+													<div class="layout-menu-tooltip-arrow" />
+													<div class="layout-menu-tooltip-text">Access Denied</div>
+												</div></li>
+										</ul></li>
+								</ul>
+								<script id="menuform:j_idt63_s" type="text/javascript">
+									PrimeFaces.cw("Ecuador", "me", {
+										id : "menuform:j_idt63"
+									});
+								</script>
+								<input type="hidden" name="javax.faces.ViewState"
+									id="j_id1:javax.faces.ViewState:0"
+									value="-6143211965936461373:-3999496334532567194"
+									autocomplete="off" />
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div class="layout-main">
+
+					<div class="route-bar">
+
+						<div class="route-bar-breadcrumb">
+							<i class="fa fa-home" /> <span>/ </span>
+
+							<li><a
+								href="dashboard.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259.html"
+								class="ui-link ui-widget">Dashboard</a></li>
+						</div>
+					</div>
+
+
+								<ui:insert name="cont" />
+								
+							
+
+					<div class="layout-footer">
+
+						<div class="ui-g">
+
+							<div class="ui-g-12 ui-md-12 ui-lg-4 logo-container-outer">
+								<a
+									href="dashboard.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw434259.html"
+									class="logo-container"><img id="j_idt179"
+									src="../javax.faces.resource/images/ecuador-orange-logo.png.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw43425960d1.png?ln=ecuador-layout"
+									alt="" /> <span class="app-name">ADVYTEAM</span></a>
+							</div>
+
+							<div class="ui-g-12 ui-md-12 ui-lg-8" style="text-align: center;">
+
+								<div id="footer-menu">
+
+									<div class="ui-g-12 ui-md-6 ui-lg-3 footer-box">
+										<span>OVERVIEW</span> <a href="#primefaces">Why ADVYTEAM</a> <a
+											href="#prime">Who Uses PrimeFaces</a> <a href="#testimonials">Testimonials</a>
+										<a href="#licence">License</a>
+									</div>
+
+									<div class="ui-g-12 ui-md-6 ui-lg-3 footer-box">
+										<span>DEMOS</span> <a href="#faces">PrimeFaces</a> <a
+											href="#ng">PrimeNG</a> <a href="#react">PrimeReact</a> <a
+											href="#ui">PrimeUI</a>
+									</div>
+
+									<div class="ui-g-12 ui-md-6 ui-lg-3 footer-box">
+										<span>SUPPORT</span> <a href="#options">Support Options</a> <a
+											href="#pro">PrimeFaces PRO</a> <a href="#elite">PrimeFaces
+											Elite</a> <a href="#forum">Forum</a>
+									</div>
+
+									<div class="ui-g-12 ui-md-6 ui-lg-3 footer-box">
+										<div class="ui-g-12 ui-md-6 ui-lg-3 footer-box">
+											<span>SOCIAL</span> <a href="#twitter" class="icon-link"><i
+												class="fa fa-twitter icon"></i></a> <a
+												href="https://cutt.ly/sehuN83" class="icon-link"><i
+												class="fa fa-facebook icon"></i></a> <a href="#github"
+												class="icon-link"><i class="fa fa-github icon"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="j_idt183" class="layout-ajax-loader">
+					<div id="j_idt183_start" style="display: none;">
+						<i class="fa fa-circle-o-notch fa-spin layout-ajax-loader-icon"
+							aria-hidden="true" />
+					</div>
+					<div id="j_idt183_complete" style="display: none;" />
+				</div>
+				<script id="j_idt183_s" type="text/javascript">
+					$(function() {
+						PrimeFaces.cw("AjaxStatus", "widget_j_idt183", {
+							id : "j_idt183"
+						});
+					});
+				</script>
+			</div>
+			<!-- Mirrored from www.primefaces.org/ecuador/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2019 16:29:18 GMT -->
+		</body>
+	</ui:define>
+</ui:composition>
+</html>
