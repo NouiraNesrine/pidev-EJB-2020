@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!-- Mirrored from www.primefaces.org/ecuador/login.xhtml by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2019 16:30:24 GMT -->
+<!-- Added by HTTrack -->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" template="/template/template.xhtml">
+	<ui:param name="page_name" value="Connexion" />
+	<ui:define name="menu">
+
+		<head>
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<!-- /Added by HTTrack -->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link type="text/css" rel="stylesheet"
+	href="javax.faces.resource/theme.cssd432.css?ln=primefaces-ecuador-amber" />
+<link type="text/css" rel="stylesheet"
+	href="javax.faces.resource/fa/font-awesome.css408e.css?ln=primefaces&amp;v=6.2" />
+<link type="text/css" rel="stylesheet"
+	href="javax.faces.resource/components.css408e.css?ln=primefaces&amp;v=6.2" />
+<script type="text/javascript"
+	src="javax.faces.resource/jquery/jquery.js408e.xhtml?ln=primefaces&amp;v=6.2"></script>
+<script type="text/javascript"
+	src="javax.faces.resource/core.js408e.xhtml?ln=primefaces&amp;v=6.2"></script>
+<script type="text/javascript"
+	src="javax.faces.resource/components.js408e.xhtml?ln=primefaces&amp;v=6.2"></script>
+<script type="text/javascript"
+	src="javax.faces.resource/jquery/jquery-plugins.js408e.xhtml?ln=primefaces&amp;v=6.2"></script>
+<link type="text/css" rel="stylesheet"
+	href="javax.faces.resource/css/layout-amber.css60d1.css?ln=ecuador-layout" />
+<script type="text/javascript">
+	if (window.PrimeFaces) {
+		PrimeFaces.settings.locale = 'en_US';
+		PrimeFaces.settings.projectStage = 'Development';
+	}
+</script>
+
+<title>PrimeFaces Ecuador - Login</title>
+		</head>
+		<body class="login-body">
+
+
+			<div class="login-topbar">
+				<a href="dashboard.html" class="logo"><img id="j_idt8"
+					src="javax.faces.resource/images/ecuador-logo.png60d1.png?ln=ecuador-layout"
+					alt="" /></a>
+			</div>
+
+			<div class="login-image">
+
+				<div class="login-panel">
+					<img id="j_idt10"
+						src="javax.faces.resource/images/ecuador-orange-logo.png60d1.png?ln=ecuador-layout"
+						alt="" />
+					<h:form id="form">
+
+
+						<h:inputText value="#{loginBean.login}" id="j_idt11"
+							name="j_idt11" type="text" placeholder="Username"
+							class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" />
+						<script id="j_idt11_s" type="text/javascript">
+							PrimeFaces.cw("InputText", "widget_j_idt11", {
+								id : "j_idt11"
+							});
+						</script>
+
+						<h:inputSecret value="#{loginBean.password}" id="j_idt12"
+							name="j_idt12" type="text" placeholder="Password"
+							class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" />
+						<script id="j_idt12_s" type="text/javascript">
+							PrimeFaces.cw("InputText", "widget_j_idt12", {
+								id : "j_idt12"
+							});
+						</script>
+
+
+
+
+
+						<h:panelGroup style="display:block; text-align:center">
+							<span class="ui-button-text ui-c"><h:commandButton
+									id="j_idt14" name="j_idt14"
+									class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only raised-btn"
+									action="#{loginBean.doLogin()}" value="Login" /> </span>
+						</h:panelGroup>
+
+
+
+
+					</h:form>
+					<div class="separator" />
+					<a href="#" class="subinfo"> <span>Forgot your password?</span>
+					</a>
+				</div>
+			</div>
+			<!-- Mirrored from www.primefaces.org/ecuador/login.xhtml by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2019 16:30:24 GMT -->
+
+		</body>
+
+	</ui:define>
+</ui:composition>
+
+</html>

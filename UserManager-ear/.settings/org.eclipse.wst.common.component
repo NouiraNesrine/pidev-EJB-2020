@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="UserManager-ear">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/application" tag="defaultRootSource"/>
+        <dependent-module archiveName="UserManager-web.war" deploy-path="/" handle="module:/resource/UserManager-web/UserManager-web">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="UserManager-ejb.jar" deploy-path="/" handle="module:/resource/UserManager-ejb/UserManager-ejb">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="lombok.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/projectlombok/lombok/1.16.18/lombok-1.16.18.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
