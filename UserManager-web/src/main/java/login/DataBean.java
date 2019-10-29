@@ -5,7 +5,6 @@ import java.io.Serializable;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 
-import entities.User;
 import enumerations.Role;
 
 @ManagedBean
@@ -16,6 +15,4 @@ public class DataBean implements Serializable {
 	public Role[] getRoles() {
 		return Role.values();
 		}
-	
-	
 	}

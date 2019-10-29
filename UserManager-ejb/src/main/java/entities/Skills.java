@@ -58,4 +58,25 @@ public class Skills implements Serializable{
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="skillsF")
 	private Set<Formation> listFormations;
 
+	   @Override
+	    public boolean equals(Object obj) 
+	    { 
+	    if(this == obj) 
+	            return true; 
+	       
+	        if(obj == null || obj.getClass()!= this.getClass()) 
+	            return false; 
+	        
+	        Skills other = (Skills) obj; 
+	       
+	        return (other.getNomCompetence().equals(this.nomCompetence)  && other.getIdSkills() == this.idSkills); 
+	    } 
+	      
+	    @Override
+	    public int hashCode() 
+	    { 
+ 
+	        return this.idSkills; 
+	    } 
+	    public Skills () {}
 }

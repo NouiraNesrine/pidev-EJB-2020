@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!-- Mirrored from www.primefaces.org/ecuador/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2019 16:29:05 GMT -->
+<!-- Added by HTTrack -->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/MyIndex.xhtml">
+	<ui:define name="cont">
+		
+		
+		<h:form>
+          
+         
+          
+          
+           <div class="ui-fluid">
+                <div class="ui-g">
+                    <div class="ui-g-12">
+                        <div class="card card-w-title">
+                            <h1>Add Mission </h1>
+                            <div id="j_idt72:j_idt74" class="ui-panelgrid ui-widget ui-panelgrid-blank form-group form-elements" style="border:0px none; background-color:transparent;">
+                                <div id="j_idt72:j_idt74_content" class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                    <div class="ui-g">
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                            <label id="j_idt72:j_idt75" class="ui-outputlabel ui-widget" for="j_idt72:input">Title</label>
+                                        </div>
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+                                        	<h:inputText  value="#{missionBean.title}" name="j_idt72:input" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" />
+                                        	<script id="j_idt72:input_s" type="text/javascript">PrimeFaces.cw("InputText","widget_j_idt72_input",{id:"j_idt72:input"});</script>
+                                        </div>
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-2 ui-grc-2">
+                                        	<label id="j_idt72:j_idt76" class="ui-outputlabel ui-widget" for="j_idt72:area">Description</label>
+                                        </div>
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+                                        	<h:inputTextarea  value="#{missionBean.description}"  name="j_idt72:area" cols="20" rows="3" maxlength="2147483647" class="ui-inputfield ui-inputtextarea ui-widget ui-state-default ui-corner-all"/>
+                                        </div>
+                                   </div>
+                                    <div class="ui-g">
+                                        	<div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                        		<label id="j_idt72:j_idt79" class="ui-outputlabel ui-widget" for="j_idt72:mask">Start Date</label>
+                                        	</div>
+                                        	<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+                                        	
+                                        		<input  value="#{missionBean.date_start}" id="j_idt721:mask" name="date_start" type="text" class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all" />
+                                        		<script id="j_idt721:mask_s" type="text/javascript">PrimeFaces.cw("InputMask","widget_j_idt721_mask",{id:"j_idt721:mask",mask:"99\-99\-9999"});</script>
+                                        	</div>
+                                        	<div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                        		<label id="j_idt72:j_idt79" class="ui-outputlabel ui-widget" for="j_idt72:mask">Finish Date</label>
+                                        	</div>
+                                        	<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+                                        		<input value="#{missionBean.date_finish}" id="j_idt72:mask" name="date_finish" type="text" class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all" />
+                                        		<script id="j_idt72:mask_s" type="text/javascript">PrimeFaces.cw("InputMask","widget_j_idt72_mask",{id:"j_idt72:mask",mask:"99\-99\-9999"});</script>
+                                        	</div>
+                                      </div>
+                                      <div class="ui-g">
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                            <label id="j_idt72:j_idt75" class="ui-outputlabel ui-widget" for="j_idt72:input">Client</label>
+                                        </div>
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+                                        	<h:inputText  value="#{missionBean.client}" name="j_idt72:input" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" />
+                                        	<script id="j_idt72:input_s" type="text/javascript">PrimeFaces.cw("InputText","widget_j_idt72_input",{id:"j_idt72:input"});</script>
+                                        </div>
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                            <label id="j_idt72:j_idt75" class="ui-outputlabel ui-widget" for="j_idt72:input">Intervention Place</label>
+                                        </div>
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+                                        	<h:inputText  value="#{missionBean.place_intervention}" name="j_idt72:input" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" />
+                                        	<script id="j_idt72:input_s" type="text/javascript">PrimeFaces.cw("InputText","widget_j_idt72_input",{id:"j_idt72:input"});</script>
+                                        </div>
+                                   </div>
+                                     
+                                     
+                                     
+                                     
+                                      <div class="ui-g">
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                            <label id="j_idt72:j_idt75" class="ui-outputlabel ui-widget" for="j_idt72:input">Estimated Budget</label>
+                                        </div>
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+                                        <div class="ui-inputgroup">
+                                        	<h:inputText  value="#{missionBean.estimated_budget}" name="j_idt157" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" />
+                                        	<script id="j_idt157_s" type="text/javascript">PrimeFaces.cw("InputText","widget_j_idt157",{id:"j_idt157"});</script> <span class="ui-inputgroup-addon">TND</span> 
+                                        	 </div>
+                                        </div>
+                                        
+                                   </div>
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     <div class="ui-g">
+                                     <div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                     <label id="j_idt721:j_idt93" class="ui-outputlabel ui-widget" for="j_idt721:chkbox">Rembursable</label>
+                                     </div>
+                                     
+                                     <div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+                                     <h:selectBooleanCheckbox value="#{missionBean.isRembursable}"/>
+                                     </div>
+                                      </div>
+                                     
+                                     
+                                     <div class="ui-g">
+                                     <div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                     <label id="j_idt721:j_idt93" class="ui-outputlabel ui-widget" for="j_idt721:chkbox">Risque to Annulate</label>
+                                     </div>
+                                     
+                                     <div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+                                     <h:selectBooleanCheckbox value="#{missionBean.isAnnulationRisque}"/>
+                                     </div>
+                                      </div>
+                                     
+                                     
+                                     
+                                     
+                                      <div class="ui-g">
+                                       <div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                            <label id="j_idt72:j_idt75" class="ui-outputlabel ui-widget" for="j_idt72:input">Select Skills</label>
+                                        </div>
+                                       <div class="ui-panelgrid-cell ui-g-12 ui-md-4" style="padding-left: 11px;">
+                                       
+                                      <h:selectManyCheckbox id="grid2" value="#{missionBean.selectedSkills}" converter="skillConverter" layout="responsive" columns="3"  >
+                                   	
+                                      
+        								<f:selectItems id="j_idt92_input" value="#{missionBean.allSkills}" var="skill" itemLabel="#{skill.nomCompetence}" itemValue="#{skill}"/>
+   									
+   									 </h:selectManyCheckbox>
+   									 
+                    				
+                                       </div>
+                                       </div>
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                     
+                                   
+                                  
+                                  
+                                  
+                                  
+                                  
+                          
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                   
+                                   
+                                   
+                                    
+                                     
+                                     <div style=" margin-top: 5em;">
+                                     <span class="ui-button-text ui-c"> <h:commandButton action="#{missionBean.updateThisMission()}" value="Update" name="j_idt215" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only rounded-btn" style="height:25px; width:200px; margin: -20px -50px; position:relative; top:50%; left:50%;"/></span>
+                                     </div>
+                                   
+                                   
+                                   
+                                   
+                                   
+                                     
+                                    </div> 
+                                 </div>
+                       		 </div>
+                    </div>
+                </div>
+            </div>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

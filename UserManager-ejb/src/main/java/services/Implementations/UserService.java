@@ -29,23 +29,18 @@ public class UserService implements IUserServiceLocal {
 		return em.createQuery("SELECT u from User u ", User.class).getResultList();
 	}
 
-	
-
 	@Override
 	public void updateUser(User u) {
-		User up= em.find(User.class,u.getIdUser());
-		
+		User up = new User();
 		if(up.getIdUser()==u.getIdUser()) {
 			up.setFirstname(u.getFirstname());
 			up.setLastname(u.getLastname());
-			up.setPassword(u.getPassword());
 			up.setEmail(u.getEmail());
 			up.setRole(u.getRole());
-			up.setActiv(u.isActiv());
+			
 			System.out.println("Updated !!"+up);
 		}
 		System.out.println("No");
-		
 	}
 
 	@Override
@@ -67,6 +62,12 @@ public class UserService implements IUserServiceLocal {
 				try { us = query.getSingleResult(); }
 				catch (Exception e) { System.out.println("Erreur : " + e); }
 				return us;
+	}
+	@Override
+	public User getUserById(int id) {
+		
+		User u = em.find(User.class, id);
+				return u;
 	}
 
 	

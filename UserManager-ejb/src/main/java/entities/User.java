@@ -22,6 +22,7 @@ import enumerations.Role;
 import lombok.Getter;
 import lombok.Setter;
 
+
 @Entity
 @Getter
 @Setter
@@ -84,39 +85,4 @@ public class User implements Serializable {
 		this.role = role;
 	}
 
-	public User(int idUser, String firstname, String lastname, String email, String password, Role role) {
-		super();
-		this.idUser = idUser;
-		Firstname = firstname;
-		Lastname = lastname;
-		this.email = email;
-		this.password = password;
-		this.role = role;
-	}
-
-	public User(String firstname, String lastname, String email, String password, Role role) {
-		super();
-		Firstname = firstname;
-		Lastname = lastname;
-		this.email = email;
-		this.password = password;
-		this.role = role;
-	}
-
-	public User(int idUser, String firstname, String lastname, String email, String password, boolean isActiv,
-			Role role) {
-		super();
-		this.idUser = idUser;
-		Firstname = firstname;
-		Lastname = lastname;
-		this.email = email;
-		this.password = password;
-		this.isActiv = isActiv;
-		this.role = role;
-	}
-	
-	
-	
-	
-	
 }

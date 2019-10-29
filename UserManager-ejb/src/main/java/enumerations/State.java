@@ -1,5 +1,5 @@
 package enumerations;
 
 public enum State {
-	Availbale,Proceeding,WaitingForFinancalTreatement,Archived
+	WaitingForApproval,Proceeding,InFinancalDepartment,Archived,Refused,Approved
 }

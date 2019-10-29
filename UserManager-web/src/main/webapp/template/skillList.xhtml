@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:ui="http://java.sun.com/jsf/facelets" template="/template/template.xhtml"> 
+ <ui:param name="page_name" value="Connexion" /> <ui:define name="menu">
+  <h:form id="form"> <h1>Mission List</h1> 
+
+
+<h:panelGroup columns="2"> <h:form> 
+
+
+
+ <h:selectManyCheckbox id="grid2" value="#{missionBean.allSkills}" layout="responsive" columns="3">
+        <f:selectItems value="#{missionBean.allSkills}" var="skill" itemLabel="#{skill.nomCompetence}" itemValue="#{skill.nomCompetence}" />
+    </h:selectManyCheckbox>
+
+
+
+ <h:selectManyCheckbox id="grid3" value="#{missionBean.allSkills}" layout="responsive" columns="3">
+        <f:selectItems value="#{missionBean.allSkills}" var="skill" itemLabel="#{skill.nomCompetence}" itemValue="#{skill.nomCompetence}" />
+    </h:selectManyCheckbox>
+
+
+</h:form> </h:panelGroup>
+
+
+                
+
+ </h:form> </ui:define> </ui:composition>
