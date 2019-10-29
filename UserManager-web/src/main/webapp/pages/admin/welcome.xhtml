@@ -39,11 +39,7 @@
 					<tr>
 						<td colspan="2"><h:commandButton value="Ajouter Employé"
 								action="#{userBean.addUser()}" /></td>
-								<td colspan="2"><h:commandButton value="modifer"
-								action="#{userBean.updateUser()}" /></td>
 					</tr>
-					
-					
 				</table>
 			</h:form>
 		</h:panelGroup>
@@ -84,12 +80,8 @@
 						<f:facet name="header">
 							<h:outputText value="Action" />
 						</f:facet>
-						<h:commandButton action="#{userBean.deleteUser(user.idUser)}"
+						<h:commandButton action="#{userBean.deleteUser(us.id)}"
 							value="Supprimer" />
-							<h:commandButton action="#{userBean.deleteUser(user.idUser)}"
-							value="Supprimer" />
-							<h:commandButton action="#{userBean.displayuseroye(user)}"
-							value="afficher" />
 					</h:column>
 				</h:dataTable>
 			</h:form>

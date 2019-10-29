@@ -27,7 +27,7 @@ public class Decision implements Serializable {
 	@Enumerated(EnumType.STRING)
 	private TypeDecision typeDec;
 	
-	@OneToOne
+	@OneToOne(mappedBy="decision")
 	private EvaluationSheet evaluation;
 	
 	@OneToOne

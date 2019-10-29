@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!-- Mirrored from www.primefaces.org/ecuador/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2019 16:29:05 GMT -->
+<!-- Added by HTTrack -->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/MyIndex.xhtml">
+	<ui:define name="cont">
+		<h:form>
+			<div class="ui-fluid">
+				<div class="ui-g">
+					<div class="ui-g-12">
+						<div class="card card-w-title">
+						
+							<div class="ui-g">
+								<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+								<h:panelGrid columns="2" >
+									<p:outputLabel value="Objectif: "/>
+									<p:selectOneMenu value="#{evaluationSheetBean.nameObj}" style="width:125px">
+
+										<f:selectItem itemLabel="Selectionner" itemValue="0" />
+										<f:selectItems value="#{evaluationSheetBean.itemObjectifList}"></f:selectItems>
+									</p:selectOneMenu>
+                                </h:panelGrid>
+								</div>
+							</div>
+							<div class="ui-g">
+								<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+								<h:panelGrid columns="2" >
+									<p:outputLabel value="User"/>
+									<p:selectOneMenu value="#{evaluationSheetBean.idUs}"  style="width:125px">
+
+										<f:selectItem itemLabel="Selectionner" itemValue="0" />
+										<f:selectItems value="#{evaluationSheetBean.itemUserList}"></f:selectItems>
+									</p:selectOneMenu>
+                               </h:panelGrid>
+								</div>
+							</div>
+							<div class="ui-g">
+								<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+								<h:panelGrid columns="2" >
+									<h:outputText value="Note "></h:outputText>
+									<h:inputText id="j_idt75" name="j_idt73" type="text"
+										placeholder="Note"
+										class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+										value="#{evaluationSheetBean.noteManager}" />
+                                </h:panelGrid>
+								</div>
+							</div>
+
+                    
+
+							<div class="ui-g">
+								<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+									<div id="j_idt90" class="ui-splitbutton ui-buttonset ui-widget"
+										style="max-width: 150px;">
+
+										<span class="ui-button-text ui-c"><h:commandButton
+												id="j_idt90" name="j_idt72:add-btn"
+												class="ui-button ui-widget ui-state-default ui-corner-left ui-button-text-icon-left"
+												style="max-width: 150px;"
+												action="#{evaluationSheetBean.addEvaluationSheet()}"
+												value="Add" /> </span>
+									</div>
+									<div id="j_idt90" class="ui-splitbutton ui-buttonset ui-widget"
+										style="max-width: 150px;">
+
+										<span class="ui-button-text ui-c"><h:commandButton
+												id="j_idt901" name="j_idt72:add-btn-1"
+												class="ui-button ui-widget ui-state-default ui-corner-left ui-button-text-icon-left"
+												style="max-width: 150px;" action="#{evaluationSheetBean.updateEvaluation()}"
+												value="Update" /> </span>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</h:form>
+        <h:form id="form">
+			<div class="ui-fluid">
+				<div class="ui-g">
+					<div class="ui-g-12">
+						<div class="card card-w-title">
+							<h1>List Of Evaluations</h1>
+							<div id="form:j_idt73"
+								class="ui-datatable ui-widget ui-datatable-reflow">
+
+								<div class="ui-datatable-header ui-widget-header ui-corner-top">
+									List of Evaluations</div>
+
+								<div class="ui-datatable-tablewrapper">
+									<table role="grid">
+										<thead id="form:j_idt73_head">
+											<tr role="row">
+												<th id="form:j_idt73:j_idt75"
+													class="ui-state-default ui-sortable-column"
+													role="columnheader" aria-label="Id" scope="col"><span
+													class="ui-column-title">Creation Date</span><span
+													class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th>
+												<th id="form:j_idt73:j_idt77"
+													class="ui-state-default ui-sortable-column"
+													role="columnheader" aria-label="Year" scope="col"><span
+													class="ui-column-title">Manager Note</span><span
+													class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th>
+												<th id="form:j_idt73:j_idt78"
+													class="ui-state-default ui-sortable-column"
+													role="columnheader" aria-label="Year" scope="col"><span
+													class="ui-column-title">Goal</span><span
+													class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th>
+											    <th id="form:j_idt73:j_idt79"
+													class="ui-state-default ui-sortable-column"
+													role="columnheader" aria-label="Year" scope="col"><span
+													class="ui-column-title">User Firstname</span><span
+													class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th>
+											
+											<th id="form:j_idt73:j_idt80"
+													class="ui-state-default ui-sortable-column"
+													role="columnheader" aria-label="Year" scope="col"><span
+													class="ui-column-title">User Lastname</span><span
+													class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th>
+											
+											<th id="form:j_idt73:j_idt81"
+													class="ui-state-default ui-sortable-column"
+													role="columnheader" aria-label="Year" scope="col"><span
+													class="ui-column-title">Score</span><span
+													class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th>
+											
+												<th id="form:j_idt73:j_idt82"
+													class="ui-state-default ui-sortable-column"
+													role="columnheader" aria-label="Color" scope="col"><span
+													class="ui-column-title">Action</span><span
+													class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th>
+												
+											</tr>
+										</thead>
+										<tbody id="form:j_idt73_data"
+											class="ui-datatable-data ui-widget-content" tabindex="0">
+											<p:dataTable value="#{evaluationSheetBean.evaluations}" var="evaluation" border="1">
+												<p:column filterBy="#{evaluation.dateCreation}" data-ri="0" data-rk="203d420b"
+													class="ui-widget-content ui-datatable-even ui-datatable-selectable"
+													role="row" aria-selected="false">
+
+													<h:outputText value="#{evaluation.dateCreation}" />
+
+												</p:column>
+												<p:column data-ri="0" data-rk="203d420b"
+													class="ui-widget-content ui-datatable-even ui-datatable-selectable"
+													role="row" aria-selected="false">
+
+													<h:outputText value="#{evaluation.noteManager}" />
+
+
+												</p:column>
+												
+												<p:column filterBy="#{evaluation.objectif.name}" data-ri="0" data-rk="203d420b"
+													class="ui-widget-content ui-datatable-even ui-datatable-selectable"
+													role="row" aria-selected="false">
+
+													<h:outputText value="#{evaluation.objectif.name}" />
+
+
+												</p:column>
+												
+												<p:column filterBy="#{evaluation.user.firstname}" data-ri="0" data-rk="203d420b"
+													class="ui-widget-content ui-datatable-even ui-datatable-selectable"
+													role="row" aria-selected="false">
+
+													<h:outputText value="#{evaluation.user.firstname}" />
+
+
+												</p:column>
+												<p:column  filterBy="#{evaluation.user.lastname}" data-ri="0" data-rk="203d420b"
+													class="ui-widget-content ui-datatable-even ui-datatable-selectable"
+													role="row" aria-selected="false">
+
+													<h:outputText value="#{evaluation.user.lastname}" />
+
+
+												</p:column>
+												
+												<p:column data-ri="0" data-rk="203d420b"
+													class="ui-widget-content ui-datatable-even ui-datatable-selectable"
+													role="row" aria-selected="false">
+
+													<h:outputText value="#{evaluationSheetBean.calculScore(evaluation)}" />
+
+												</p:column>
+												
+												<p:column data-ri="0" data-rk="203d420b"
+													class="ui-widget-content ui-datatable-even ui-datatable-selectable"
+													role="row" aria-selected="false">
+
+													<span class="ui-button-text ui-c"><p:commandButton
+															id="j_idt216" name="j_idt216" update=":form"
+															class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only secondary-button rounded-btn"
+															style="margin-bottom: 10px;"
+															action="#{evaluationSheetBean.deleteEvaluation(evaluation.evalId)}"
+															value="delete" />
+															</span>
+															
+													<span class="ui-button-text ui-c"><h:commandButton
+															id="j_idt217" name="j_idt216"
+															class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only secondary-button rounded-btn"
+															style="margin-bottom: 10px;"
+															action="#{evaluationSheetBean.displayEvaluation(evaluation)}"
+														value="display" /></span>
+														
+													</p:column>
+											</p:dataTable>											
+										</tbody>
+									</table>
+									
+									
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</h:form>
+		
+
+	</ui:define>
+</ui:composition>
+</html>

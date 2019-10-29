@@ -13,6 +13,7 @@ public interface IUserServiceLocal {
 	public void updateUser(User u);
 	public void deleteUser(int id);
 	public User getUserByEmailAndPassword(String email, String password);
+	public User getUserById(int id);
 	
 	
 }

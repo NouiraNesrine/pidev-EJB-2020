@@ -6,302 +6,101 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui"
+	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	template="/template/MyIndex.xhtml">
 	<ui:define name="cont">
 		<h:form>
-			<div class="ui-fluid">
-				<div class="ui-g">
-					<div class="ui-g-12">
-						<div class="card card-w-title">
-							<div class="ui-g">
-								<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
-									<h:outputText value="Nom"></h:outputText>
-									<h:inputText id="j_idt73" name="j_idt73" type="text"
-										placeholder="FirstName"
-										class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
-										value="#{userBean.firstname}" />
 
-								</div>
-							</div>
-							<div class="ui-g">
-								<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
-									<h:outputText value="Prenom"></h:outputText>
-									<h:inputText id="j_idt74" name="j_idt73" type="text"
-										placeholder="LastName"
-										class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
-										value="#{userBean.lastname}" />
-
-								</div>
-							</div>
-							<div class="ui-g">
-								<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
-									<h:outputText value="Login (Email)"></h:outputText>
-									<h:inputText id="j_idt75" name="j_idt74" type="text"
-										placeholder="Email" value="#{userBean.email}"
-										class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" />
-
-								</div>
-							</div>
-							<div class="ui-g">
-								<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
-									<h:outputText value="Actif / Inactif"></h:outputText>
-									<h:inputText id="j_idt76" name="j_idt75" type="text"
-										placeholder="isActiv"
-										class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
-										value="#{userBean.isActif}" />
-
-
-								</div>
-							</div>
-							<div class="ui-g">
-								<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
-
-									<h:outputText value="Mot de Passe"></h:outputText>
-									<h:inputSecret id="j_idt77" name="j_idt75" type="text"
-										placeholder="password"
-										class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
-										value="#{userBean.password}" />
-
-								</div>
-							</div>
-							<div class="ui-g"></div>
-
-							<div class="ui-g">
-								<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
-									<h:outputText value="Role"></h:outputText>
-
-									<h:selectOneMenu value="#{userBean.role}">
-										<f:selectItem itemLabel="Choisir Role" itemValue="" />
-										<f:selectItems value="#{dataBean.roles}" />
-									</h:selectOneMenu>
-
-
-								</div>
-							</div>
-
-							<div class="ui-g">
-								<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
-									<div id="j_idt90" class="ui-splitbutton ui-buttonset ui-widget"
-										style="max-width: 150px;">
-
-										<span class="ui-button-text ui-c"><h:commandButton
-												id="j_idt90" name="j_idt72:add-btn"
-												class="ui-button ui-widget ui-state-default ui-corner-left ui-button-text-icon-left"
-												style="max-width: 150px;" action="#{userBean.addUser()}"
-												value="Save" /> </span>
-									</div>
-									<div id="j_idt90" class="ui-splitbutton ui-buttonset ui-widget"
-										style="max-width: 150px;">
-
-										<span class="ui-button-text ui-c"><h:commandButton
-												id="j_idt901" name="j_idt72:add-btn-1"
-												class="ui-button ui-widget ui-state-default ui-corner-left ui-button-text-icon-left"
-												style="max-width: 150px;" action="#{userBean.updateUser()}"
-												value="Save" /> </span>
-									</div>
-
-								</div>
-							</div>
-
+			<h1>Calendar</h1>
+			<div id="j_idt99"
+				class="ui-panelgrid ui-widget ui-panelgrid-blank form-group"
+				style="margin-top: 10px">
+				<div id="j_idt99_content"
+					class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+					<div class="ui-g">
+						<div class="ui-panelgrid-cell ui-g-12 ui-md-12">
+							<img id="j_idt100" alt=""
+								src="javax.faces.resource/spacer/dot_clear.gif408e.gif?ln=primefaces&amp;v=6.2" />
 						</div>
 					</div>
-				</div>
-			</div>
-			<div class="ui-fluid">
-				<div class="ui-g">
-					<div class="ui-g-12">
-						<div class="card card-w-title">
-							<h1>List Of Users</h1>
-							<div id="form:j_idt73"
-								class="ui-datatable ui-widget ui-datatable-reflow">
-
-								<div class="ui-datatable-header ui-widget-header ui-corner-top">
-									List of Cars</div>
-
-								<div class="ui-datatable-tablewrapper">
-									<table role="grid">
-										<thead id="form:j_idt73_head">
-											<tr role="row">
-												<th id="form:j_idt73:j_idt75"
-													class="ui-state-default ui-sortable-column"
-													role="columnheader" aria-label="Id" scope="col"><span
-													class="ui-column-title">First Name</span><span
-													class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th>
-												<th id="form:j_idt73:j_idt77"
-													class="ui-state-default ui-sortable-column"
-													role="columnheader" aria-label="Year" scope="col"><span
-													class="ui-column-title">Last Name</span><span
-													class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th>
-												<th id="form:j_idt73:j_idt79"
-													class="ui-state-default ui-sortable-column"
-													role="columnheader" aria-label="Brand" scope="col"><span
-													class="ui-column-title">Email</span><span
-													class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th>
-												<th id="form:j_idt73:j_idt81"
-													class="ui-state-default ui-sortable-column"
-													role="columnheader" aria-label="Color" scope="col"><span
-													class="ui-column-title">Role</span><span
-													class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th>
-												<th id="form:j_idt73:j_idt81"
-													class="ui-state-default ui-sortable-column"
-													role="columnheader" aria-label="Color" scope="col"><span
-													class="ui-column-title">Action</span><span
-													class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th>
-											</tr>
-										</thead>
-										<tbody id="form:j_idt73_data"
-											class="ui-datatable-data ui-widget-content" tabindex="0">
-											<h:dataTable value="#{userBean.users}" var="user" border="1">
-												<h:column data-ri="0" data-rk="203d420b"
-													class="ui-widget-content ui-datatable-even ui-datatable-selectable"
-													role="row" aria-selected="false">
-
-													<h:outputText value="#{user.firstname}" />
-
-												</h:column>
-												<h:column data-ri="0" data-rk="203d420b"
-													class="ui-widget-content ui-datatable-even ui-datatable-selectable"
-													role="row" aria-selected="false">
-
-													<h:outputText value="#{user.lastname}" />
-
-												</h:column>
-												<h:column data-ri="0" data-rk="203d420b"
-													class="ui-widget-content ui-datatable-even ui-datatable-selectable"
-													role="row" aria-selected="false">
-
-													<h:outputText value="#{user.email}" />
-
-												</h:column>
-												<h:column data-ri="0" data-rk="203d420b"
-													class="ui-widget-content ui-datatable-even ui-datatable-selectable"
-													role="row" aria-selected="false">
-
-													<h:outputText value="#{user.role}" />
-
-												</h:column>
-												<h:column data-ri="0" data-rk="203d420b"
-													class="ui-widget-content ui-datatable-even ui-datatable-selectable"
-													role="row" aria-selected="false">
-
-													<span class="ui-button-text ui-c">Delete<h:commandButton
-															id="j_idt216" name="j_idt216"
-															class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only secondary-button rounded-btn"
-															style="margin-bottom: 10px;"
-															action="#{userBean.deleteUser(user.idUser)}" /></span>
-
-													<script id="j_idt216_s" type="text/javascript">
-														PrimeFaces
-																.cw(
-																		"CommandButton",
-																		"widget_j_idt216",
-																		{
-																			id : "j_idt216"
-																		});
-													</script>
-
-													<h:commandButton action="#{userBean.displayuseroye(user)}"
-														value="afficher" />
-
-
-
-
-												</h:column>
-											</h:dataTable>
-										</tbody>
-									</table>
-								</div>
-							</div>
-
+					<div class="ui-g">
+						<div class="ui-panelgrid-cell ui-g-12 ui-md-12">
+							<span id="inline" class="ui-calendar"><div
+									id="inline_inline"></div> <inputText id="inline_input"
+									name="inline_input" type="hidden"
+									value="#{evaluationSheetBean.dateCreation}" ></inputText></span>
+							<script id="inline_s" type="text/javascript">
+								$(function() {
+									PrimeFaces.cw("Calendar", "widget_inline",
+											{
+												id : "inline",
+												popup : false,
+												locale : "en_US",
+												dateFormat : "m\/d\/y"
+											});
+								});
+							</script>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div class="ui-fluid">
-				<div class="ui-g">
-					<div class="ui-g-12">
-						<div class="card card-w-title">
-							<div class="card">
-								<h1>Dialog</h1>
-								<form id="j_idt85" name="j_idt85" method="post"
-									action="https://www.primefaces.org/ecuador/overlay.xhtml"
-									enctype="application/x-www-form-urlencoded">
-									<input type="hidden" name="j_idt85" value="j_idt85" />
-									<button id="j_idt85:j_idt86" name="j_idt85:j_idt86"
-										class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
-										onclick="PF('dlg').show()" style="width: 100%" type="button">
-										<span class="ui-button-text ui-c">Show</span>
-									</button>
-									<script id="j_idt85:j_idt86_s" type="text/javascript">
-										PrimeFaces.cw("CommandButton",
-												"widget_j_idt85_j_idt86", {
-													id : "j_idt85:j_idt86"
-												});
-									</script>
-									<div id="j_idt85:j_idt87"
-										class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container">
-										<div
-											class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top">
-											<span id="j_idt85:j_idt87_title" class="ui-dialog-title">Dialog</span><a
-												href="#"
-												class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all"
-												aria-label="Close"><span
-												class="ui-icon ui-icon-closethick"></span></a><a href="#"
-												class="ui-dialog-titlebar-icon ui-dialog-titlebar-maximize ui-corner-all"><span
-												class="ui-icon ui-icon-extlink"></span></a><a href="#"
-												class="ui-dialog-titlebar-icon ui-dialog-titlebar-minimize ui-corner-all"><span
-												class="ui-icon ui-icon-minus"></span></a>
-										</div>
-										<div class="ui-dialog-content ui-widget-content">
-											<p>
-												khedmet
-											</p>
-										</div>
-										<div class="ui-dialog-footer ui-widget-content">
-											<span><button id="j_idt85:j_idt89"
-													name="j_idt85:j_idt89"
-													class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left"
-													onclick="PF('dlg').hide()" type="button">
-													<span class="ui-button-icon-left ui-icon ui-c fa fa-check"></span><span
-														class="ui-button-text ui-c">Yes</span>
-												</button>
-												<script id="j_idt85:j_idt89_s" type="text/javascript">
-													PrimeFaces
-															.cw(
-																	"CommandButton",
-																	"widget_j_idt85_j_idt89",
-																	{
-																		id : "j_idt85:j_idt89"
-																	});
-												</script>
-												<button id="j_idt85:j_idt90" name="j_idt85:j_idt90"
-													class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left secondary-button"
-													onclick="PF('dlg').hide()" type="button">
-													<span class="ui-button-icon-left ui-icon ui-c fa fa-close"></span><span
-														class="ui-button-text ui-c">No</span>
-												</button>
-												<script id="j_idt85:j_idt90_s" type="text/javascript">
-													PrimeFaces
-															.cw(
-																	"CommandButton",
-																	"widget_j_idt85_j_idt90",
-																	{
-																		id : "j_idt85:j_idt90"
-																	});
-												</script></span>
-										</div>
-									</div>
-									<script id="j_idt85:j_idt87_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","dlg",{id:"j_idt85:j_idt87",modal:true,width:"300",responsive:true});});</script>
-									<input type="hidden" name="javax.faces.ViewState"
-										id="j_id1:javax.faces.ViewState:7"
-										value="6350329094982133212:-4337365886454354145"
-										autocomplete="off" />
-								</form>
-							</div>
+					<div class="ui-g">
+						<div class="ui-panelgrid-cell ui-g-12 ui-md-12">
+							<label id="j_idt101" class="ui-outputlabel ui-widget"
+								for="popup_input">Popup:</label>
 						</div>
 					</div>
+					<div class="ui-g">
+						<div class="ui-panelgrid-cell ui-g-12 ui-md-12">
+							<span id="popup" class="ui-calendar"><input
+								id="popup_input" name="popup_input" type="text"
+								class="ui-inputfield ui-widget ui-state-default ui-corner-all"
+								aria-labelledby="j_idt101" /></span>
+							<script id="popup_s" type="text/javascript">
+								$(function() {
+									PrimeFaces.cw("Calendar", "widget_popup", {
+										id : "popup",
+										popup : true,
+										locale : "en_US",
+										dateFormat : "m\/d\/y"
+									});
+								});
+							</script>
+						</div>
+						<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+							<h:inputText id="j_idt73" name="j_idt73" type="text"
+								placeholder="Note Manager"
+								value="#{evaluationSheetBean.noteManager}"
+								class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" />
+							<script id="j_idt73_s" type="text/javascript">
+								PrimeFaces.cw("InputText", "widget_j_idt73", {
+									id : "j_idt73"
+								});
+							</script>
+						</div>
+					</div>
+
+
+
+					<div class="ui-g-12 ui-md-4" style="text-align: center">
+						
+						<button id="j_idt217" name="j_idt217"
+							class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only success-btn rounded-btn"
+							style="margin-bottom: 10px;" type="button" action="#{evaluationSheetBean.addEvaluationSheet()}">
+							<span class="ui-button-text ui-c">Success</span>
+						</button>
+						<script id="j_idt217_s" type="text/javascript">
+							PrimeFaces.cw("CommandButton", "widget_j_idt217", {
+								id : "j_idt217"
+							});
+						</script>
+						
+					</div>
+
+
+
+
+					
+
 				</div>
 			</div>
 		</h:form>

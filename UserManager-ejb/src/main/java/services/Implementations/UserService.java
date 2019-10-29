@@ -17,7 +17,7 @@ public class UserService implements IUserServiceLocal {
 	
 	@PersistenceContext(unitName="pidev-ejb")
 	EntityManager em;
-	User us = new User();
+	
 	@Override
 	public User addUser(User u) {
 		 em.persist(u);
@@ -29,23 +29,9 @@ public class UserService implements IUserServiceLocal {
 		return em.createQuery("SELECT u from User u ", User.class).getResultList();
 	}
 
-	
-
 	@Override
 	public void updateUser(User u) {
-		User up= em.find(User.class,u.getIdUser());
-		
-		if(up.getIdUser()==u.getIdUser()) {
-			up.setFirstname(u.getFirstname());
-			up.setLastname(u.getLastname());
-			up.setPassword(u.getPassword());
-			up.setEmail(u.getEmail());
-			up.setRole(u.getRole());
-			up.setActiv(u.isActiv());
-			System.out.println("Updated !!"+up);
-		}
-		System.out.println("No");
-		
+		em.persist(u);
 	}
 
 	@Override
@@ -69,6 +55,15 @@ public class UserService implements IUserServiceLocal {
 				return us;
 	}
 
+	@Override
+	public User getUserById(int idUser) {
+		TypedQuery<User> query =
+				em.createQuery("SELECT u FROM User u where u.idUser=:idUser ", User.class).setParameter("idUser", idUser);
+				User us = null;
+				try { us = query.getSingleResult(); }
+				catch (Exception e) { System.out.println("Erreur : " + e); }
+				return us;
+	}
 	
 	
 
