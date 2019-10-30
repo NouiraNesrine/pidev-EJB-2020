@@ -1,0 +1,20 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	 xmlns:b="http://bootsfaces.net/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/template/MyIndex.xhtml">
+	
+	<ui:define name="cont"> 
+	<h1> Statistiques sur lefffs types des sujfffets</h1>
+
+<p:chart type="pie" model="#{chartView.pieModel1}" style="width:400px;height:300px" />
+ <p:inputText id="firstname" value="#{userView.firstname}">
+  </p:inputText>
+		
+</ui:define>
+</ui:composition>
+</html>

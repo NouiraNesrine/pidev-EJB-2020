@@ -10,33 +10,26 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	template="/template/MyIndex.xhtml">
 	<ui:define name="cont">
-	
 		<h:form>
 		
-	
-<table>
+		
+		<table>
 
 
 <tr>
-							<td><h:outputText  type="text"  value="Nom de la Competence :  "></h:outputText></td> 
-							
-							<td><h:inputText    value="#{skillsbean.nomCompetence}"></h:inputText></td>
+							<td><h:outputText value="Nom de la Competence :  "></h:outputText></td>
+							<td><h:inputText value="#{skillsbean.nomCompetence}"></h:inputText></td>
 						</tr>
-						
-						<br></br>
 <tr>
-							<td><h:outputText  value="Description de la Competence :  "></h:outputText></td>
-							<td><h:inputText  value="#{skillsbean.description}"></h:inputText></td>
+							<td><h:outputText value="Description de la Competence :  "></h:outputText></td>
+							<td><h:inputText value="#{skillsbean.description}"></h:inputText></td>
 						</tr>
 
 
 <tr>
-
-						<td><h:outputText  value="Niveau"></h:outputText> <h:selectOneMenu
+						<td><h:outputText value="Niveau"></h:outputText> <h:selectOneMenu
 								value="#{skillsbean.niveau}">
-								<br></br>
 								<f:selectItem itemLabel="Choisir Niveau" itemValue="" />
-								
 								<f:selectItems value="#{dataBean.niveaus}" />
 							</h:selectOneMenu></td>
 					</tr>
@@ -45,7 +38,6 @@
 						<td><h:outputText value="Categories"></h:outputText> <h:selectOneMenu
 								value="#{skillsbean.categorie}">
 								<f:selectItem itemLabel="Choisir Niveau" itemValue="" />
-							<br></br>
 								<f:selectItems value="#{dataBean.categories}" />
 							</h:selectOneMenu></td>
 					</tr>
@@ -55,18 +47,20 @@
 						<td><h:outputText value="skillsreferences"></h:outputText> <h:selectOneMenu
 								value="#{skillsbean.skillsRef}">
 								<f:selectItem itemLabel="Choisir skillsreferences" itemValue="" />
-								<br></br>
 								<f:selectItems value="#{dataBean.skillsReferencess}" />
 							</h:selectOneMenu></td>
 					</tr>
 
 <tr>
-
-							<td colspan="2"><h:commandButton value="Ajouter Employé"
-									action="#{skillsbean.addSkills()}" /></td>
+							<td colspan="2"><h:commandButton value=" update"
+									action="#{skillsbean.updateEmploye()}" /></td>
+									
+									
 						</tr>
 
 </table>
+		
+		
 		</h:form>
 	</ui:define>
 </ui:composition>

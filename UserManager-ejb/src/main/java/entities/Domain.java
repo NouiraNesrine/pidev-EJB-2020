@@ -14,8 +14,6 @@ import javax.persistence.OneToMany;
 
 import enumerations.TypeDomain;
 
-
-
 @Entity
 
 

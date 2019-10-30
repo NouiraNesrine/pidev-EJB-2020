@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!-- Mirrored from www.primefaces.org/ecuador/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2019 16:29:05 GMT -->
+<!-- Added by HTTrack -->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/MyIndex.xhtml">
+<ui:define name="cont"> 
+	
+ 
+<style>
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+ 
+   
+         <h:form >
+   
+    
+    <center>
+    <td > <h1 >Ajouter Sujet </h1></td>
+    <table>
+    
+    	<tr><td><h:outputText  type="text"  value="Nom de la Competence :  "></h:outputText></td> 
+							
+							<td><h:inputText    value="#{domainBean.name}"></h:inputText></td></tr>
+							
+							
+							<tr><td><h:outputText  type="text"  value="nbre question :  "></h:outputText></td> 
+							
+							<td><h:inputText    value="#{topicBean.nombre_question}"></h:inputText></td></tr>
+							
+							
+								<tr><td><h:outputText  type="text"  value="duree :  "></h:outputText></td> 
+							
+							<td><h:inputText    value="#{topicBean.dureeTopic}"></h:inputText></td></tr>
+							
+						<tr><td>	<h:outputText value="Categories"></h:outputText> <h:selectOneMenu
+								value="#{topicBean.console}">
+								<f:selectItem itemLabel="Choisir Niveau" itemValue="" />
+							<br></br>
+								<f:selectItems value="#{topicBean.domain()}" />
+							</h:selectOneMenu></td></tr>
+    <tr>
+
+							<td colspan="2"><h:commandButton value="Ajouter Employé"  class="button" 
+									 action="#{topicBean.doAdd()}"  /></td>
+						</tr>
+    
+    
+   
+    
+    </table>
+     
+     
+     
+     </center>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		</h:form>
+		  
+	</ui:define>
+</ui:composition>
+</html>

@@ -40,6 +40,6 @@ public class JobDescription implements Serializable{
 	
 	@ManyToMany(cascade = CascadeType.ALL)
     private Set<Skills> JDSkilss ; 
-	//
+	
 	
 }
