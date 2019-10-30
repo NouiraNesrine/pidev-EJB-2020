@@ -47,7 +47,7 @@ public class LoginBean implements Serializable, Filter {
 		if (user != null) {
 		switch (user.getRole()) {
 		case administrateur:
-			navigateTo = "/template/ManagerSpace.jsf?faces-redirect=true";
+			navigateTo = "/pages/chahnez/afficherDomain?faces-redirect=true";
 			
 			break;
 		case employe:
