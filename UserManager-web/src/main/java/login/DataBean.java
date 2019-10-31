@@ -5,11 +5,11 @@ import java.io.Serializable;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 
-import entities.User;
 import enumerations.Role;
 
 @ManagedBean
 @ApplicationScoped
+
 public class DataBean implements Serializable {
 	private static final long serialVersionUID = 1L;
 

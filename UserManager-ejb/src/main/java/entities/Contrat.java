@@ -34,4 +34,27 @@ public class Contrat implements Serializable {
 	
 	@OneToOne
 	private User user;
+
+	public Contrat() {
+		super();
+	}
+
+	public Contrat(Date dateDebut, String typeContrat, float salaire, User user) {
+		super();
+		this.dateDebut = dateDebut;
+		this.typeContrat = typeContrat;
+		this.salaire = salaire;
+		this.user = user;
+	}
+
+	public Contrat(int idContrat, Date dateDebut, String typeContrat, float salaire, User user) {
+		super();
+		this.idContrat = idContrat;
+		this.dateDebut = dateDebut;
+		this.typeContrat = typeContrat;
+		this.salaire = salaire;
+		this.user = user;
+	}
+	
+	
 }

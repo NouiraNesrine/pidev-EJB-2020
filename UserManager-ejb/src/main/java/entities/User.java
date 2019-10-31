@@ -47,7 +47,10 @@ public class User implements Serializable {
 
 	@Column
 	private boolean isActiv;
-
+	
+	@Column
+	private String value;
+	
 	@Enumerated(EnumType.STRING)
 	@Column
 	Role role;
@@ -56,7 +59,7 @@ public class User implements Serializable {
 	private List<Skills> Userskills;
 
 	@ManyToMany(mappedBy = "UsersParticipants", cascade = CascadeType.ALL)
-	private Set<Formation> formations;
+	private List<Formation> formations;
 
 	@OneToOne(mappedBy = "user")
 	private Timesheet timesheet;
@@ -117,6 +120,10 @@ public class User implements Serializable {
 	
 	
 	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="useToCom")
+	private List<Commentaire> commentairesU;
 	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="useToSta")
+	private List<Statu> statusU;
 	
 }

@@ -7,7 +7,7 @@ import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
-
+import entities.Contrat;
 import entities.User;
 import enumerations.Role;
 import lombok.Getter;
@@ -17,7 +17,6 @@ import services.Interfaces.IUserServiceLocal;
 
 @ManagedBean
 @SessionScoped
-
 @Getter
 @Setter
 public class UserBean implements Serializable {
@@ -32,10 +31,11 @@ public class UserBean implements Serializable {
 	private Boolean isActif;
 	private Role role;
 	private List<User> users;
+	private Contrat c;
 
 	private User us;
 	private Integer useroyeIdToBeUpdated;
-	private User[] users2;
+
 	
 	@EJB
 	IUserServiceLocal ius = new UserService();
@@ -68,11 +68,10 @@ public class UserBean implements Serializable {
 	this.setPassword(user.getPassword());
 	this.setUseroyeIdToBeUpdated(user.getIdUser());
 	}
-	@EJB
-	UserService fms;
 	
 	public void updateUser()
-	{ fms.updateUser(new User(useroyeIdToBeUpdated, firstname, lastname, email,password,  isActif, role)); }
+	{ ius.updateUser(new User(useroyeIdToBeUpdated, firstname, lastname, email,password,  isActif, role)); }
 	
-
+	
+	
 }

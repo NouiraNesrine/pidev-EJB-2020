@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!-- Mirrored from www.primefaces.org/ecuador/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2019 16:29:05 GMT -->
+<!-- Added by HTTrack -->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" template="/template/MyIndex.xhtml">
+	<ui:define name="cont">
+		<h:form>
+			<div class="card card-w-title">
+				<div class="ui-g">
+					<div class="text-center">
+						<div id="j_idt99"
+							class="ui-panelgrid ui-widget ui-panelgrid-blank form-group"
+							style="margin-top: 10px">
+							<div id="j_idt99_content"
+								class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+								<h3 style="margin-top: 0">Employe List</h3>
+								<h:dataTable value="#{contratBean.contrats}" var="emp">
+									<h:column>
+
+										<h:outputText value="#{emp.salaire} #{emp.dateDebut}"/>
+											
+									</h:column>
+									<h:column>
+									<p:commandButton 
+									 style="margin-top:5px"
+									value="Affect" action="#{contratBean.a(emp)}"></p:commandButton>
+									</h:column>
+								</h:dataTable>
+
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>
