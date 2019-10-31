@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!-- Mirrored from www.primefaces.org/ecuador/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2019 16:29:05 GMT -->
+<!-- Added by HTTrack -->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/MyIndex.xhtml">
+	<ui:define name="cont">
+		
+		
+		<h:form>
+          
+         
+          
+          
+           <div class="ui-fluid">
+                <div class="ui-g">
+                    <div class="ui-g-12">
+                        <div class="card card-w-title">
+                            <h1>Mission</h1>
+                            <div id="j_idt72:j_idt74" class="ui-panelgrid ui-widget ui-panelgrid-blank form-group form-elements" style="border:0px none; background-color:transparent;">
+                                <div id="j_idt72:j_idt74_content" class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                     
+                   					
+                    				 <div class="ui-g">
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                            <label id="j_idt72:j_idt75" class="ui-outputlabel ui-widget" for="j_idt72:input"><strong>Title:</strong></label>
+                                        </div>
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+                                        	<input  value="#{missionBean.title} "   type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" style="border:none"  readonly="readonly"/>
+                                        </div>
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                            <label id="j_idt72:j_idt75" class="ui-outputlabel ui-widget" for="j_idt72:input"><strong>Estimated Budget:</strong></label>
+                                        </div>
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                        	<input value="#{missionBean.estimated_budget}" id="estimated_budget" name="estimated_budget" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" style="border:none"  readonly="readonly" />
+                                        </div>
+                                   	</div>  	
+                                    <hr style="border: 0; height: 1px; background: #333; background-image: linear-gradient(to right, #ccc, #333, #ccc);"></hr>
+                                     
+                                    <div class="ui-g">
+                                        	<div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                        		<label id="j_idt72:j_idt79" class="ui-outputlabel ui-widget" for="j_idt72:mask"><strong>Start Date:</strong></label>
+                                        	</div>
+                                        	<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+                                        	
+                                        		<input  value="#{missionBean.st_date}" id="j_idt721:mask" name="date_start" type="text" class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all"   style="border:none"  readonly="readonly"/>
+                                        		<script id="j_idt721:mask_s" type="text/javascript">PrimeFaces.cw("InputMask","widget_j_idt721_mask",{id:"j_idt721:mask",mask:"99\-99\-9999"});</script>
+                                        	</div>
+                                        	
+                                        	<div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                        		<label id="j_idt72:j_idt79" class="ui-outputlabel ui-widget" for="j_idt72:mask"><strong>Finish Date:</strong></label>
+                                        	</div>
+                                        	<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+                                        		<input value="#{missionBean.ft_date}" id="j_idt72:mask" name="date_finish" type="text" class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all"   style="border:none"  readonly="readonly"  />
+                                        		<script id="j_idt72:mask_s" type="text/javascript">PrimeFaces.cw("InputMask","widget_j_idt72_mask",{id:"j_idt72:mask",mask:"99\-99\-9999"});</script>
+                                        	</div>
+                                      </div>
+                                       <hr style="border: 0; height: 1px; background: #333; background-image: linear-gradient(to right, #ccc, #333, #ccc);"></hr>
+                                     
+	                                       
+                                  	  <div class="ui-g">
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                            <label id="j_idt72:j_idt75" class="ui-outputlabel ui-widget" for="j_idt72:input"><strong>Client:</strong></label>
+                                        </div>
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+                                        	<input  value="#{missionBean.client}" id="clientMission" name="client" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" style="border:none"  readonly="readonly" />
+                                        </div>
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                            <label id="j_idt72:j_idt75" class="ui-outputlabel ui-widget" for="j_idt72:input"><strong>Intervention Place:</strong></label>
+                                        </div>
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+                                        	<input  value="#{missionBean.place_intervention}" id="place_intervention" name="place_intervention" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" style="border:none"  readonly="readonly"/>
+                                        </div>
+                                   	</div>
+                                   	<hr style="border: 0; height: 1px; background: #333; background-image: linear-gradient(to right, #ccc, #333, #ccc);"></hr>
+                                      <div class="ui-g">
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                            <label id="j_idt72:j_idt75" class="ui-outputlabel ui-widget" for="j_idt72:input"><strong>Rembursable:</strong></label>
+                                        </div>
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+                                        	<input  value="#{missionBean.isRembursable}" id="#{missionBean.isRembursable}" name="#{missionBean.isRembursable}" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" style="border:none"  readonly="readonly"/>
+                                        </div>
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                            <label id="j_idt72:j_idt75" class="ui-outputlabel ui-widget" for="j_idt72:input"><strong>Risque to Annulate:</strong></label>
+                                        </div>
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+                                        	<input  value="#{missionBean.isAnnulationRisque}" id="#{missionBean.isAnnulationRisque}" name="#{missionBean.isAnnulationRisque}" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" style="border:none"  readonly="readonly"/>
+                                        </div>
+                                   	</div>
+                                   	<hr style="border: 0; height: 1px; background: #333; background-image: linear-gradient(to right, #ccc, #333, #ccc);"></hr>
+                                   	 <div class="ui-g">
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                            <label id="j_idt72:j_idt75" class="ui-outputlabel ui-widget" for="j_idt72:input"><strong>Skills:</strong></label>
+                                        </div>
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+                                        <ui:repeat var="skill" value="#{missionBean.selectedSkills}" id="skill">&#160;
+							                <h:outputText id="itemTitle" value="#{skill.nomCompetence}"  />
+							            </ui:repeat>
+                                       </div>
+                                   	
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                            <label id="j_idt72:j_idt75" class="ui-outputlabel ui-widget" for="j_idt72:input"><strong>Description:</strong></label>
+                                        </div>
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+                                        	<input  value="#{missionBean.description}"   type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" style="border:none"  readonly="readonly"/>
+                                        </div>
+                                   	</div>
+                                   		<hr style="border: 0; height: 1px; background: #333; background-image: linear-gradient(to right, #ccc, #333, #ccc);"></hr>
+                                   
+                                     <div class="ui-g">
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                            <label id="j_idt72:j_idt75" class="ui-outputlabel ui-widget" for="j_idt72:input"><strong>Posted By:</strong></label>
+                                        </div>
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+                                        	<input  value="#{missionBean.posterFirstN} #{missionBean.posterLastN}"   type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" style="border:none"  readonly="readonly"/>
+                                        </div>
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                            <label id="j_idt72:j_idt75" class="ui-outputlabel ui-widget" for="j_idt72:input"><strong>State:</strong></label>
+                                        </div>
+                                        <div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+                                        	<input  value="#{missionBean.state} "   type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" style="border:none"  readonly="readonly"/>
+                                        </div>
+                                   	</div>  
+                                     <hr style="border: 0; height: 1px; background: #333; background-image: linear-gradient(to right, #ccc, #333, #ccc);"></hr>
+                                   
+                                     
+                                     <div class="ui-g">
+                                       <div class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                            <label id="j_idt72:j_idt75" class="ui-outputlabel ui-widget" for="j_idt72:input"><strong>Select Employees:</strong></label>
+                                        </div>
+                                       <div class="ui-panelgrid-cell ui-g-12 ui-md-4" style="padding-left: 11px;">
+                                       
+                                      <h:selectManyCheckbox id="grid2" value="#{missionBean.participantsSelected}"  layout="responsive" columns="3"  >
+                                   	
+                                      
+        								<f:selectItems id="j_idt92_input" value="#{missionBean.allParticipants}" var="emp" itemLabel=" #{emp.getFirstname()}  #{ emp.getLastname()}" itemValue="#{emp}"/>
+   										<br/>
+   									 </h:selectManyCheckbox>
+   									 
+                    				
+                                       </div>
+                                       </div>
+                                     
+                                     <div style=" margin-top: 5em;" class="ui-panelgrid-cell ui-g-12 ui-md-2">
+                                     <span class="ui-button-text ui-c"> <h:commandButton action="#{missionBean.approveMissionPostedByManager(missionBean.refrence)}" value="Validate" name="j_idt215" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only rounded-btn" style="height:25px; width:200px; margin: -20px -50px; position:relative; top:50%; left:50%;"/></span>
+                                    </div>
+                                    <div style=" margin-top: 5em; float: right;" class="ui-panelgrid-cell ui-g-12 ui-md-8">
+                                     <span class="ui-button-text ui-c"> <h:commandButton action="#{missionBean.refuseMissionPostedByManager(missionBean.refrence)}" value="Refuse" name="j_idt215" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only rounded-btn" style="height:25px; width:200px; margin: -20px -50px; position:relative; top:50%; left:50%;"/></span>
+                                     </div>
+                                   
+                                   
+                                   
+                                   
+                                     
+                                    </div> 
+                                 </div>
+                       		 </div>
+                    </div>
+                </div>
+            </div>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

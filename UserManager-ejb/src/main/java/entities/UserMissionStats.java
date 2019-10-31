@@ -19,8 +19,6 @@ import lombok.Setter;
 @Setter
 public class UserMissionStats {
 	private static final long serialVersionUID = -3661125011192221L;
-	//SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-	//System.out.println(formatter.format(date));
 	@Id 
 	@GeneratedValue (strategy = GenerationType.IDENTITY) 
 	private int refrence ;

@@ -11,28 +11,29 @@
 	template="/template/MyIndex.xhtml">
 	<ui:define name="cont">
 		<h:form>
+		<title>Manager Space</title>
 		<span class="ui-button-text ui-c"><h:commandButton  name="new_mission" value="Add New Mission"  class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only raised-btn" style="margin-bottom:10px;" action="#{missionBean.goToAddMission()}"/></span>
-		<span class="ui-button-text ui-c"><h:commandButton  name="Approve_mission" value="Missions To Approve"  class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only raised-btn" style="margin-bottom:10px;" action="#{missionBean.goToAddMission()}"/></span>
-		<span class="ui-button-text ui-c"><h:commandButton  name="Posted_mission" value="Posted Missions"  class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only raised-btn" style="margin-bottom:10px;" action="#{missionBean.goToUpdateMission()}"/></span>
-		<span class="ui-button-text ui-c"><h:commandButton  name="Suprvised_mission" value="Suprvised Missions"  class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only raised-btn" style="margin-bottom:10px;" action="#{missionBean.goToUpdateMission()}"/></span>
+		<span class="ui-button-text ui-c"><h:commandButton  name="Approve_mission" value="Missions To Approve"  class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only raised-btn" style="margin-bottom:10px;" action="#{missionBean.goToMissionsToApprove()}"/></span>
+		<span class="ui-button-text ui-c"><h:commandButton  name="Posted_mission" value="Posted Missions"  class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only raised-btn" style="margin-bottom:10px;" action="#{missionBean.goToPostedMissions()}"/></span>
+		<span class="ui-button-text ui-c"><h:commandButton  name="Suprvised_mission" value="Suprvised Missions"  class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only raised-btn" style="margin-bottom:10px;" action="#{missionBean.goToSuprvisedMissions()}"/></span>
 			
 			
 			<div id="j_idt148" class="ui-panel ui-widget ui-widget-content ui-corner-all projects" data-widget="widget_j_idt148"><div id="j_idt148_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Missions To Approve</span></div><div id="j_idt148_content" class="ui-panel-content ui-widget-content">
                             <ul>
+                            <ui:repeat value="#{missionBean.missionsSupervisedByUser}" var="mission">
                                 <li> 
                                     <div class="project-info">
-                                        <span class="project-name">Morpheus</span>
-                                        <span class="project-firm">PrimeFaces</span>
+                                        <span class="project-name">#{mission.title}</span>
+                                        <span class="project-firm">Mission</span>
                                     </div>
                                     <div class="person-container">
-                                        <div class="persons"><img id="j_idt150" src="javax.faces.resource/images/faces-morpheus.png.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw43425960d1.png?ln=ecuador-layout" alt="" />
-                                        </div>
-                                        <span>24 people interested</span>
+                                        
                                     </div>
-                                    <div class="button"><button id="j_idt152" name="j_idt152" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button"><span class="ui-button-text ui-c">See Details</span></button><script id="j_idt152_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_j_idt152",{id:"j_idt152"});</script>
+                                     <div class="button">
+                                    <h:commandButton  name="avmis" value="See Details"  class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only raised-btn" action="#{missionBean.goToMissionModelSupervised(mission)}"/>
                                     </div>                            
                                 </li>
-                                
+                            </ui:repeat>    
                             </ul>
                             </div>
                             </div>

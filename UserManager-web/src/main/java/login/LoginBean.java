@@ -1,17 +1,23 @@
 package login;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
-
+import entities.Mission;
+import entities.Skills;
 import entities.User;
 import lombok.Getter;
 import lombok.Setter;
+import services.Implementations.MissionService;
 import services.Implementations.UserService;
+import services.Interfaces.IMissionServiceLocal;
 import services.Interfaces.IUserServiceLocal;
 
 @ManagedBean
@@ -32,6 +38,7 @@ public class LoginBean implements Serializable {
 	IUserServiceLocal us = new UserService();
 	
 	
+	
 	public String doLogin() {
 		
 		String navigateTo = "null";
@@ -41,11 +48,11 @@ public class LoginBean implements Serializable {
 		switch (user.getRole()) {
 		case administrateur:
 			
-			navigateTo = "/template/ManagerSpace?faces-redirect=true";
+			navigateTo = "/template/ManagerMissionSpace?faces-redirect=true";
 			loggedIn = true;
 			break;
 		case employe:
-			navigateTo = "/template/welcome?faces-redirect=true";
+			navigateTo = "/template/EmployeeMissionSpace?faces-redirect=true";
 			loggedIn = true;
 			break;
 		case rh:

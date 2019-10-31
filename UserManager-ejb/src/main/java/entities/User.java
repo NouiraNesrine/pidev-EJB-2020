@@ -59,6 +59,9 @@ public class User implements Serializable {
 	@ManyToMany(mappedBy = "UsersParticipants", cascade = CascadeType.ALL)
 	private Set<Formation> formations;
 
+	@ManyToMany(mappedBy = "participants", cascade = CascadeType.ALL)
+	private Set<Mission> missions;
+	
 	@OneToOne(mappedBy = "user")
 	private Timesheet timesheet;
 
@@ -84,5 +87,29 @@ public class User implements Serializable {
 		this.isActiv = isActiv;
 		this.role = role;
 	}
+	@Override
+    public boolean equals(Object obj) 
+    { 
+    if(this == obj) 
+            return true; 
+       
+        if(obj == null || obj.getClass()!= this.getClass()) 
+            return false; 
+        
+        User other = (User) obj; 
+       
+        return (other.getIdUser() == this.idUser); 
+    } 
+      
+    @Override
+    public int hashCode() 
+    { 
+
+        return this.idUser; 
+    } 
+    
+    public int getIdUser() {return this.idUser;}
+    public void setIdUser(int id) { this.idUser=id;}
+    
 
 }

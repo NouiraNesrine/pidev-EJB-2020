@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!-- Mirrored from www.primefaces.org/ecuador/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2019 16:29:05 GMT -->
+<!-- Added by HTTrack -->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/MyIndexE.xhtml">
+	<ui:define name="cont">
+		<h:form>
+		<title>Employee Space</title>
+		<span class="ui-button-text ui-c"><h:commandButton  name="new_mission" value="Ask For Mission"  class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only raised-btn" style="margin-bottom:10px;" action="#{missionBean.goToAddMission()}"/></span>
+		<span class="ui-button-text ui-c"><h:commandButton  name="Availbale_mission" value="Availbale Missions"  class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only raised-btn" style="margin-bottom:10px;" action="#{missionBean.goToAvailbaledMissions()}"/></span>
+		<span class="ui-button-text ui-c"><h:commandButton  name="Posted_mission" value="Posted Missions"  class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only raised-btn" style="margin-bottom:10px;" action="#{missionBean.goToPostedMissionsByUser()}"/></span>
+		<span class="ui-button-text ui-c"><h:commandButton  name="Applied_mission" value="Missions Applied For"  class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only raised-btn" style="margin-bottom:10px;" action="#{missionBean.goToAppliedForMissions()}"/></span>
+		<span class="ui-button-text ui-c"><h:commandButton  name="Participated_mission" value="Missions Participated In"  class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only raised-btn" style="margin-bottom:10px;" action="#{missionBean.goToParticipatedInMissions()}"/></span>
+			
+			
+			<div id="j_idt148" class="ui-panel ui-widget ui-widget-content ui-corner-all projects" data-widget="widget_j_idt148"><div id="j_idt148_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Missions Applied For</span></div><div id="j_idt148_content" class="ui-panel-content ui-widget-content">
+                            <ul>
+                                <ui:repeat value="#{missionBean.missionsAppliedFor}" var="mission">
+                                <li> 
+                                    <div class="project-info">
+                                        <span class="project-name">#{mission.getTitle()}</span>
+                                        <span class="project-firm">Applied For</span>
+                                    </div>
+                                    <div class="person-container">
+                                        <div class="persons"><img id="j_idt150" src="javax.faces.resource/images/faces-morpheus.png.xhtml%3bjsessionid%3dnode013qxhk57eqh1xsnvgx566eqw43425960d1.png?ln=ecuador-layout" alt="" />
+                                        </div>
+                                        <span>24 people interested</span>
+                                    </div>
+                                    <h:commandButton  name="avmis" value="See Details"  class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only raised-btn" action="#{missionBean.goToMissionModelAppliedFor(mission)}"/>
+                                                            
+                                </li>
+                            </ui:repeat>  
+                            </ul>
+                            </div>
+                            </div>
+                            <script id="j_idt148_s" type="text/javascript">PrimeFaces.cw("Panel","widget_j_idt148",{id:"j_idt148"});</script>
+			
+		
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>
