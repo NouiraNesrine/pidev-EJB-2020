@@ -20,15 +20,13 @@ public class ContratService implements IContratServiceLocal {
 	EntityManager em;
 	List<Contrat> ListContr = new ArrayList<Contrat>();
 	Contrat c = new Contrat();
-	String notAdm = c.getUser().getRole().toString();
+	
 	
 	@Override
 	public int addContrat(Contrat c) {
-		while (notAdm=="administrateur") {
+		
 			em.persist(c);
 			return c.getIdContrat();
-		}
-		return 0;
 	}
 
 	@Override
@@ -48,17 +46,18 @@ public class ContratService implements IContratServiceLocal {
 
 	@Override
 	public List<Contrat> getAllContrat() {
-		
-		return ListContr.stream().distinct().collect(Collectors.toList());
+		ListContr = em.createQuery("from Contrat", Contrat.class).getResultList();
+		return ListContr ;
 		
 	}
 
 	@Override
 	public void removeContrat(int id) {
-		while (notAdm=="administrateur") {
+	
 			em.remove(em.find(Contrat.class, id));
-		}
+		
 	}
+
 	
 	
 
