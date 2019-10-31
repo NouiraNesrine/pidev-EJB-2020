@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!-- Mirrored from www.primefaces.org/ecuador/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2019 16:29:05 GMT -->
+<!-- Added by HTTrack -->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/MyIndex.xhtml">
+	<ui:define name="cont">
+		<h:form>
+		
+		
+		<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+
+
+		<style>
+input[type=text], select {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+input[type=submit] {
+	width: 100%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: #45a049;
+}
+
+div {
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+}
+</style>
+		<style>
+.button {
+	background-color: #ffa31a; /* Green */
+	border: none;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.button5 {
+	border-radius: 50%;
+}
+</style>
+
+		<style>
+.buttonn {
+	display: inline-block;
+	padding: 15px 25px;
+	font-size: 24px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	background-color: #ffa31a;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+}
+
+.button:hover {
+	background-color: #3e8e41
+}
+
+.button:active {
+	background-color: #b36b00;
+	box-shadow: 0 5px #b36b00;
+	transform: translateY(4px);
+}
+</style>
+		
+		
+		
+
+<h:form>
+						
+							<tr>
+								<td><h:outputText value="nom"></h:outputText></td>
+								<td><h:inputText value="#{activityBean.nom}"></h:inputText></td>
+							</tr>
+							<tr>
+								<td><h:outputText value="description"></h:outputText></td>
+								<td><h:inputText value="#{activityBean.description}"></h:inputText></td>
+							</tr>
+								<tr>
+								<td><h:outputText value="NombreHeuresEstimer"></h:outputText></td>
+								<td><h:inputText
+										value="#{activityBean.nombreHeuresEstimer}"></h:inputText></td>
+							</tr>
+							
+							<h:outputText value="validité"></h:outputText>
+							<h:selectOneMenu value="#{activityBean.statut}">
+								<f:selectItem itemLabel="Choisir validation" itemValue="" />
+								<f:selectItems value="#{dataActivity.activity}" />
+							</h:selectOneMenu>
+							<tr>
+							
+								<td colspan="2"><h:commandButton value="update Activity"
+										action="#{activityBean.updateActivity()}" /></td>
+							</tr>
+							
+
+						
+							
+							
+							<span><h:commandButton id="j_idt78" value="update"
+									class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+									action="#{activityBean.updateActivity()}" /></span>
+					
+						
+						<button class="button button5" value="update"
+				action="#{activityBean.updateActivity()}">ClockIn</button>
+						
+						
+					</h:form>
+			
+
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

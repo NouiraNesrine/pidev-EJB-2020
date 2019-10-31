@@ -17,6 +17,8 @@ import javax.persistence.TemporalType;
 import lombok.Getter;
 import lombok.Setter;
 
+
+
 @Entity
 @Getter
 @Setter
@@ -54,4 +56,8 @@ public class ExpenseNote implements Serializable {
 		this.accommodationExp = accommodationExp;
 	}
 
+	public ExpenseNote() {
+		super();
+	}
+	
 }
