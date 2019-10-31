@@ -36,4 +36,8 @@ public class Conge implements Serializable{
 	
 	@OneToOne
 	private User user;
+
+
+
+
 }

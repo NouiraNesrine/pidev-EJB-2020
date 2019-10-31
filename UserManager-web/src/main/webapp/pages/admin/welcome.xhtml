@@ -1,6 +1,7 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	template="/template/template.xhtml">
 
@@ -39,7 +40,11 @@
 					<tr>
 						<td colspan="2"><h:commandButton value="Ajouter Employé"
 								action="#{userBean.addUser()}" /></td>
+								<td colspan="2"><h:commandButton value="modifer"
+								action="#{userBean.updateUser()}" /></td>
 					</tr>
+					
+					
 				</table>
 			</h:form>
 		</h:panelGroup>
@@ -80,8 +85,12 @@
 						<f:facet name="header">
 							<h:outputText value="Action" />
 						</f:facet>
-						<h:commandButton action="#{userBean.deleteUser(us.id)}"
+						<h:commandButton action="#{userBean.deleteUser(user.idUser)}"
 							value="Supprimer" />
+							<h:commandButton action="#{userBean.deleteUser(user.idUser)}"
+							value="Supprimer" />
+							<h:commandButton action="#{userBean.displayuseroye(user)}"
+							value="afficher" />
 					</h:column>
 				</h:dataTable>
 			</h:form>
@@ -93,5 +102,30 @@
 <h:commandLink value="Déconnexion" action="#{loginBean.doLogout()}" />
 			</h:form>
 		</h:panelGroup>
+		<h:form>
+										<p:growl>
+											<p:autoUpdate />
+										</p:growl>
+
+										<p:signature style="width:400px;height:200px" widgetVar="sig"
+											value="#{dataBean.value}" required="true"
+											guideline="true" />
+
+										<div style="margin: 20px 0">
+											<p:commandButton value="Submit" icon="pi pi-check"
+												update="output" />
+											<p:commandButton value="Clear" icon="pi pi-times"
+												type="button" onclick="PF('sig').clear()" />
+										</div>
+
+										<p:outputPanel id="output">
+											<h:outputText rendered="#{not empty dataBean.value}"
+												style="font-size:24px;display:block" value="Your Signature" />
+											<p:signature style="width:400px;height:200px;"
+												value="#{dataBean.value}" readonly="true"
+												rendered="#{not empty dataBean.value}"
+												backgroundColor="#eaeaea" color="#03a9f4" />
+										</p:outputPanel>
+									</h:form>
 	</ui:define>
 </ui:composition>

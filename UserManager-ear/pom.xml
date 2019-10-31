@@ -47,7 +47,6 @@
             <artifactId>UserManager-web</artifactId>
             <type>war</type>
         </dependency>
-     
         <dependency>
             <groupId>pidev</groupId>
             <artifactId>UserManager-ejb</artifactId>

@@ -51,7 +51,7 @@
 
         <!-- Define the version of the JBoss BOMs we want to import to specify tested stacks. -->
         <version.jboss.bom>8.2.1.Final</version.jboss.bom>
-        <version.wildfly>9.0.2.Final</version.wildfly>
+        <version.wildfly>11.0.0.Final</version.wildfly>
 
 
         <!-- other plugin versions -->
@@ -111,11 +111,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-<dependency>
-				<groupId>org.primefaces</groupId>
-				<artifactId>primefaces</artifactId>
-				<version>${primefaces.version}</version>
-			</dependency>
+
         </dependencies>
     </dependencyManagement>
 

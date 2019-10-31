@@ -3,7 +3,6 @@ package entities;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -21,7 +20,6 @@ import javax.persistence.OneToOne;
 import enumerations.Role;
 import lombok.Getter;
 import lombok.Setter;
-
 
 @Entity
 @Getter
@@ -57,7 +55,7 @@ public class User implements Serializable {
 	private List<Skills> Userskills;
 
 	@ManyToMany(mappedBy = "UsersParticipants", cascade = CascadeType.ALL)
-	private Set<Formation> formations;
+	private List<Formation> formations;
 
 	@OneToOne(mappedBy = "user")
 	private Timesheet timesheet;
@@ -65,11 +63,13 @@ public class User implements Serializable {
 	@OneToMany(mappedBy = "user", cascade = { CascadeType.PERSIST, CascadeType.REMOVE }, fetch = FetchType.EAGER)
 	private List<EvaluationSheet> evaluations = new ArrayList<>();
 
-	@OneToOne(mappedBy="user")
+	@OneToOne(mappedBy = "user")
 	private Contrat contrat;
 
-	@OneToOne(mappedBy="user")
+	@OneToOne(mappedBy = "user")
 	private Conge conge;
+	
+	
 
 	public User() {
 		super();
@@ -85,4 +85,10 @@ public class User implements Serializable {
 		this.role = role;
 	}
 
+	
+
+
+	
+
+	
 }

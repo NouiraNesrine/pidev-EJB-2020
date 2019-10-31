@@ -7,7 +7,7 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	template="/template/template.xhtml">
+	xmlns:p="http://primefaces.org/ui" template="/template/template.xhtml">
 	<ui:param name="page_name" value="Connexion" />
 	<ui:define name="menu">
 
@@ -65,6 +65,8 @@
 						src="javax.faces.resource/images/ecuador-orange-logo.png60d1.png?ln=ecuador-layout"
 						alt="" />
 					<h:form id="form">
+
+
 						<h:inputText value="#{loginBean.login}" id="j_idt11"
 							name="j_idt11" type="text" placeholder="Username"
 							class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" />
@@ -73,6 +75,7 @@
 								id : "j_idt11"
 							});
 						</script>
+
 						<h:inputSecret value="#{loginBean.password}" id="j_idt12"
 							name="j_idt12" type="text" placeholder="Password"
 							class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" />
@@ -82,41 +85,19 @@
 							});
 						</script>
 
-						<div class="checkbox-container">
 
-							<div class="remember-me">
-								<div id="j_idt14"
-									class="ui-selectbooleancheckbox ui-chkbox ui-widget">
-									<div class="ui-helper-hidden-accessible">
-										<input id="j_idt14_input" name="j_idt14_input" type="checkbox"
-											autocomplete="off" aria-hidden="true" aria-checked="false" />
-									</div>
-									<div
-										class="ui-chkbox-box ui-widget ui-corner-all ui-state-default">
-										<span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c" />
-									</div>
-								</div>
-								<script id="j_idt14_s" type="text/javascript">
-									PrimeFaces.cw("SelectBooleanCheckbox",
-											"widget_j_idt14", {
-												id : "j_idt14"
-											});
-								</script>
-								<span>Remember me</span>
-							</div>
 
-							<span><h:commandButton id="j_idt16" value="Sign Up"
-									class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
-									action="#{loginBean.doLogin()}" /></span>
 
-							<script id="j_idt16_s" type="text/javascript">
-								PrimeFaces.cw("CommandButton",
-										"widget_j_idt16", {
-											id : "j_idt16"
-										});
-							</script>
 
-						</div>
+						<h:panelGroup style="display:block; text-align:center">
+							<span class="ui-button-text ui-c"><h:commandButton
+									id="j_idt14" name="j_idt14"
+									class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only raised-btn"
+									action="#{loginBean.doLogin()}" value="Login" /> </span>
+						</h:panelGroup>
+
+
+
 
 					</h:form>
 					<div class="separator" />
