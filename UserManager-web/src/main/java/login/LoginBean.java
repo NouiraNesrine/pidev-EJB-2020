@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
-
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
@@ -25,8 +24,8 @@ public class LoginBean implements Serializable {
 	public String login;
 	public String password;
 	public User user;
-	public boolean loggin;
-	public String signature;
+	public Boolean loggedIn;
+
 	@EJB
 	IUserServiceLocal us = new UserService();
 
@@ -34,32 +33,31 @@ public class LoginBean implements Serializable {
 		String navigateTo = "null";
 		user = us.getUserByEmailAndPassword(login, password);
 		if (user != null) {
-			switch (user.getRole()) {
-			case administrateur:
-				navigateTo = "/template/ManagerSpace?faces-redirect=true";
-				loggin = true;
-				break;
-			case employe:
-				navigateTo = "/template/EmployeSpace?faces-redirect=true";
-				loggin = true;
-				break;
-			case rh:
-				navigateTo = "/template/RhSpace?faces-redirect=true";
-				loggin = true;
-				break;
-			default:
-				break;
-			}
-		} else {
-
+		switch (user.getRole()) {
+		case administrateur:
+			navigateTo = "/template/ManagerSpace?faces-redirect=true";
+			loggedIn = true;
+			break;
+		case employe:
+			navigateTo = "/template/EmployeSpace?faces-redirect=true";
+			loggedIn = true;
+			break;
+		case rh:
+			navigateTo = "/template/RhSpace?faces-redirect=true";
+			loggedIn = true;
+			break;
+		default:
+			break;
+		}}
+		 else {
 			FacesContext.getCurrentInstance().addMessage("form:btn", new FacesMessage("Bad Credentials"));
-
+		
 		}
 		return navigateTo;
 	}
 
 	public String doLogout() {
-
+		
 		FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
 		System.out.println("done");
 		return "/loggin?faces-redirect=true";
@@ -69,12 +67,4 @@ public class LoginBean implements Serializable {
 		super();
 	}
 	
-	
-	public String addS() {
-		User u = new User();
-		 us.getUserById(u.getIdUser());
-		u.setValue(signature);
-		us.addSignature(u, u.getIdUser());
-		return "/template/ManagerSpace?faces-redirect=true";
-	}
 }
