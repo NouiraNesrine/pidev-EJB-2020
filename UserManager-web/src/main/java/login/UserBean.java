@@ -7,7 +7,6 @@ import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
-import entities.Contrat;
 import entities.User;
 import enumerations.Role;
 import lombok.Getter;
@@ -23,7 +22,6 @@ public class UserBean implements Serializable {
 
 	private static final long serialVersionUID = -5027299396318962247L;
 
-	private int idUser;
 	private String firstname;
 	private String lastname;
 	private String password;
@@ -31,16 +29,12 @@ public class UserBean implements Serializable {
 	private Boolean isActif;
 	private Role role;
 	private List<User> users;
-	private Contrat c;
-
 	private User us;
-	private Integer useroyeIdToBeUpdated;
-
+	
 	
 	@EJB
 	IUserServiceLocal ius = new UserService();
 
-	
 	public void addUser() {
 		ius.addUser(new User(firstname, lastname, email, password, isActif, role));
 	}
@@ -48,30 +42,8 @@ public class UserBean implements Serializable {
 		users = ius.getAllUser();
 		return users;
 		}
-	
-	
-	
-	public void deleteUser(int id) {
-		
-		
-			ius.deleteUser(id);
+	public void deleteUser(int iduser) {
+		ius.deleteUser(us.getIdUser());
+	}
 
-	}
-	public void displayuseroye(User user)
-	{
-	this.setLastname(user.getLastname());
-	this.setFirstname(user.getFirstname());
-	this.setIsActif(user.isActiv());
-	this.setEmail(user.getEmail());
-	this.setRole(user.getRole());
-	this.setEmail(user.getEmail());
-	this.setPassword(user.getPassword());
-	this.setUseroyeIdToBeUpdated(user.getIdUser());
-	}
-	
-	public void updateUser()
-	{ ius.updateUser(new User(useroyeIdToBeUpdated, firstname, lastname, email,password,  isActif, role)); }
-	
-	
-	
 }

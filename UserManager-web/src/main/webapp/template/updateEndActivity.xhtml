@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!-- Mirrored from www.primefaces.org/ecuador/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2019 16:29:05 GMT -->
+<!-- Added by HTTrack -->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/MyIndex.xhtml">
+	<ui:define name="cont">
+	
+	
+	
+	<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+		
+	
+	
+<style>
+.button {
+  background-color: #ff9933; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.button5 {border-radius: 50%;}
+</style>
+		
+		
+
+<h:form>
+						
+							
+
+							
+							
+							<h:outputText value="validité"></h:outputText>
+							<h:selectOneMenu value="#{activityBean.statut}">
+								<f:selectItem itemLabel="Choisir validation" itemValue="" />
+								<f:selectItems value="#{dataActivity.activity}" />
+							</h:selectOneMenu>
+							<tr>
+							
+								<td colspan="2"><h:commandButton  class="button button5" value="update Activity"
+										action="#{activityBean.StartActivity()}" /></td>
+							</tr>
+							
+							<tr>
+							<td colspan="2"><h:commandButton  class="button button5" value="update Activity"
+										action="#{activityBean.EndActivity()}" /></td>
+							</tr>
+							
+					
+						
+						
+						
+						
+					</h:form>
+	
+	</ui:define>
+</ui:composition>
+</html>

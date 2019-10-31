@@ -13,6 +13,7 @@ import enumerations.AccType;
 import lombok.Getter;
 import lombok.Setter;
 
+
 @Entity
 @Getter
 @Setter
@@ -34,6 +35,10 @@ public class AccommodationExpenses implements Serializable {
 		this.duration = duration;
 		this.costs = costs;
 		this.accommodationBill = accommodationBill;
+	}
+
+	public AccommodationExpenses() {
+		super();
 	}
 	
 }

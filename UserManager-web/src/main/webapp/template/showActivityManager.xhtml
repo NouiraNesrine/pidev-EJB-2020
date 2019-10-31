@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!-- Mirrored from www.primefaces.org/ecuador/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2019 16:29:05 GMT -->
+<!-- Added by HTTrack -->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/MyIndex.xhtml">
+	<ui:define name="cont">
+		<h:form>
+
+			<style>
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+</style>
+
+
+
+			<table>
+
+
+
+
+				<h:panelGroup columns="2">
+
+					<h:form>
+						<h:panelGroup columns="2">
+							<h:form>
+								<h:dataTable value="#{activityBean.activities}" var="activity"
+									border="1">
+									<h:column>
+										<f:facet name="header">
+											<h:outputText value="Nom" />
+										</f:facet>
+										<h:outputText value="#{activity.nom}" />
+									</h:column>
+									<h:column>
+										<f:facet name="header">
+											<h:outputText value="description" />
+										</f:facet>
+										<h:outputText value="#{activity.description}" />
+									</h:column>
+									<h:column>
+										<f:facet name="header">
+											<h:outputText value="nombreHeuresEstimer" />
+										</f:facet>
+										<h:outputText value="#{activity.nombreHeuresEstimer}" />
+									</h:column>
+									<h:column>
+										<f:facet name="header">
+											<h:outputText value="nombreHeuresTravailler" />
+										</f:facet>
+										<h:outputText value="#{activity.nombreHeuresTravailler}" />
+									</h:column>
+									<h:column>
+										<f:facet name="header">
+											<h:outputText value="validité" />
+										</f:facet>
+										<h:outputText value="#{activity.statut}" />
+									</h:column>
+
+
+									<h:column>
+										<f:facet name="header">
+											<h:outputText value="Action" />
+										</f:facet>
+										
+											<span><h:commandButton id="j_idt78" value="delete"
+									class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+									action="#{activityBean.removeActivity(activity.id)}" /></span>
+									
+									
+									<span><h:commandButton id="j_idt79" value="Update"
+									class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+									action="#{activityBean.displayActivity(activity)}" /></span>
+
+									</h:column>
+								</h:dataTable>
+							</h:form>
+						</h:panelGroup>
+
+
+					</h:form>
+				</h:panelGroup>
+
+			</table>
+
+
+
+
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

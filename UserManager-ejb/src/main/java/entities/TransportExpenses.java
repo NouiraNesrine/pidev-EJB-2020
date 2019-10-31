@@ -13,6 +13,7 @@ import enumerations.TrspType;
 import lombok.Getter;
 import lombok.Setter;
 
+
 @Entity
 @Getter
 @Setter
@@ -36,6 +37,10 @@ public class TransportExpenses implements Serializable{
 		this.visa = visa;
 		this.costs = costs;
 		this.boardingTicket = boardingTicket;
+	}
+
+	public TransportExpenses() {
+		super();
 	}
 	
 

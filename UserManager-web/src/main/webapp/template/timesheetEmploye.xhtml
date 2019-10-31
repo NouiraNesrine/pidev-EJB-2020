@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!-- Mirrored from www.primefaces.org/ecuador/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2019 16:29:05 GMT -->
+<!-- Added by HTTrack -->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" template="/template/MyIndex.xhtml">
+	<ui:define name="cont">
+
+		<style>
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+</style>
+
+
+
+
+
+		<table>
+
+
+
+
+			<h:panelGroup columns="2">
+
+				<h:form>
+					<h:panelGroup columns="2">
+						<h:form>
+							<h:dataTable value="#{timesheetttBean.timesheets}"
+								var="timesheet" border="1">
+
+
+								<h:column>
+									<f:facet name="header">
+										<h:outputText value="NombreJoursTravaillerParmois" />
+									</f:facet>
+									<h:outputText value="#{timesheet.nombreJoursTravaillerParmois}" />
+								</h:column>
+								<h:column>
+									<f:facet name="header">
+										<h:outputText value="nombreHeureTravailler" />
+									</f:facet>
+									<h:outputText value="#{timesheet.nombreHeureTravailler}" />
+								</h:column>
+								<h:column>
+									<f:facet name="header">
+										<h:outputText value="isActive" />
+									</f:facet>
+									<h:outputText value="#{timesheet.isActive}" />
+								</h:column>
+
+
+								<h:column>
+									<f:facet name="header">
+										<h:outputText value="clock in" />
+									</f:facet>
+
+
+
+									<h:outputText value="#{timesheet.clockIn}">
+										<f:convertDateTime pattern="EEEEEEEE, MMM dd, yyyy" />
+									</h:outputText>
+
+
+								</h:column>
+
+
+
+								<h:column>
+									<f:facet name="header">
+										<h:outputText value="Last Clock Out" />
+									</f:facet>
+
+
+									<h:outputText value="#{timesheet.lastClockOut}">
+										<f:convertDateTime pattern="EEEEEEEE, MMM dd, yyyy" />
+									</h:outputText>
+
+
+								</h:column>
+
+
+								<h:column>
+									<f:facet name="header">
+										<h:outputText value="Action" />
+									</f:facet>
+
+									<span><h:commandButton id="j_idt88" value="ClockIN/Out"
+											class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+											action="#{timesheetttBean.displaylockIn(timesheet)}" /></span>
+
+
+
+								</h:column>
+
+
+
+
+
+							</h:dataTable>
+							<tr>
+							
+										<span><h:commandButton id="j_idt88" value="Your Activities"
+											class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+											action="#{timesheetttBean.boutonAct()}" /></span>
+							</tr>
+							
+				
+						</h:form>
+					</h:panelGroup>
+
+
+
+
+
+				</h:form>
+			</h:panelGroup>
+
+
+		</table>
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+	</ui:define>
+</ui:composition>
+</html>

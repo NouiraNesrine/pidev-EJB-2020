@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!-- Mirrored from www.primefaces.org/ecuador/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2019 16:29:05 GMT -->
+<!-- Added by HTTrack -->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/MyIndex.xhtml">
+	<ui:define name="cont">
+		<h:form>
+
+
+
+
+			<div class="card card-w-title">
+				<h1>Add Activity</h1>
+				<div id="j_idt72"
+					class="ui-panelgrid ui-widget ui-panelgrid-blank form-group">
+					<div id="j_idt72_content"
+						class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+						<div class="ui-g">
+							<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+Nom:
+								<h:inputText value="#{activityBean.nom}" id="j_idt73"
+									name="j_idt73" type="text" placeholder="Name"
+									class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" />
+
+
+
+								<script id="j_idt73_s" type="text/javascript">
+									PrimeFaces.cw("InputText",
+											"widget_j_idt73", {
+												id : "j_idt73"
+											});
+								</script>
+							</div>
+							
+							Description
+							<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+								<h:inputText value="#{activityBean.description}"
+									id="j_idt74" name="j_idt74" type="text"
+									placeholder="description"
+									class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" />
+								<script id="j_idt74_s" type="text/javascript">
+									PrimeFaces.cw("InputText",
+											"widget_j_idt74", {
+												id : "j_idt74"
+											});
+								</script>
+							</div>
+							
+							
+							
+							
+							                             
+							Heure Estimer
+							<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+								<h:inputText value="#{activityBean.nombreHeuresEstimer}"
+									id="j_idt75" name="j_idt75" type="number"  min="1" max="100" step="10" 
+									placeholder="Nombre Heures Estimer"
+									class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" />
+								<script id="j_idt75_s" type="text/javascript">
+									PrimeFaces.cw("InputText",
+											"widget_j_idt75", {
+												id : "j_idt75"
+											});
+								</script>
+							</div>
+
+                             Validation
+							<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+								<h:selectOneMenu value="#{activityBean.statut}">
+									<f:selectItem itemLabel="validation" itemValue="" />
+									<f:selectItems value="#{dataActivity.activity}" />
+								</h:selectOneMenu>
+								<script id="j_idt75_s" type="text/javascript">
+									PrimeFaces.cw("InputText",
+											"widget_j_idt75", {
+												id : "j_idt75"
+											});
+								</script>
+							</div>
+							
+							
+							
+							
+							
+							
+							
+							<span><h:commandButton id="j_idt78" value="Add Activity"
+									class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+									action="#{activityBean.addActivity()}" /></span>
+
+
+						</div>
+						<div class="ui-g"></div>
+					</div>
+				</div>
+			</div>
+
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

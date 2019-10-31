@@ -63,6 +63,10 @@ public class Mission implements Serializable{
 		this.skillsRequired=skillsRequired;
 		
 	}
+
+	public Mission() {
+		super();
+	}
 	 
 	 
 }
