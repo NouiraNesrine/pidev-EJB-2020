@@ -13,4 +13,5 @@ public interface IContratServiceLocal {
 	public void updateContrat(int id);
 	public List<Contrat> getAllContrat();
 	public void removeContrat(int id);
+	
 }
