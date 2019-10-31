@@ -14,6 +14,7 @@ public interface IUserServiceLocal {
 	public void deleteUser(int id);
 	public User getUserByEmailAndPassword(String email, String password);
 	public User getUserById(int id);
+	public List<User> getAllEmploye();
 	
 	
 }

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!-- Mirrored from www.primefaces.org/ecuador/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2019 16:29:05 GMT -->
+<!-- Added by HTTrack -->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/MyIndex.xhtml">
+	<ui:define name="cont">
+		<h:form>
+			<div class="ui-fluid">
+				<div class="ui-g">
+					<div class="ui-g-12">
+						<div class="card card-w-title">
+						
+							<div class="ui-g">
+								<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+								<h:panelGrid columns="2" >
+									<p:outputLabel value="User"/>
+									<p:selectOneMenu value="#{decisionBean.idU}"  style="width:125px">
+
+										<f:selectItem itemLabel="Select" itemValue="0" />
+										<f:selectItems value="#{evaluationSheetBean.itemUserList}"></f:selectItems>
+									</p:selectOneMenu>
+                               </h:panelGrid>
+								</div>
+							</div>
+					
+							<div class="ui-g">
+								<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+									<div id="j_idt90" class="ui-splitbutton ui-buttonset ui-widget"
+										style="max-width: 150px;">
+
+										<span class="ui-button-text ui-c"><h:commandButton
+												id="j_idt90" name="j_idt72:add-btn" update=":form"
+												class="ui-button ui-widget ui-state-default ui-corner-left ui-button-text-icon-left"
+												style="max-width: 150px;"
+												value="Show decisions" /> </span>
+									</div>
+	
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</h:form>
+        <h:form id="form">
+			<div class="ui-fluid">
+				<div class="ui-g">
+					<div class="ui-g-12">
+										
+						<div class="card card-w-title">
+							<h1>List Of Decisions</h1>
+							<div id="form:j_idt73"
+								class="ui-datatable ui-widget ui-datatable-reflow">
+
+								<div class="ui-datatable-header ui-widget-header ui-corner-top">
+									List of Decisions</div>
+
+								<div class="ui-datatable-tablewrapper">
+									<table role="grid">
+										<thead id="form:j_idt73_head">
+											<tr role="row">
+												<th id="form:j_idt73:j_idt75"
+													class="ui-state-default ui-sortable-column"
+													role="columnheader" aria-label="Id" scope="col"><span
+													class="ui-column-title">Creation Date</span><span
+													class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th>
+												<th id="form:j_idt73:j_idt77"
+													class="ui-state-default ui-sortable-column"
+													role="columnheader" aria-label="Year" scope="col"><span
+													class="ui-column-title">Score de decision</span><span
+													class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th>
+												<th id="form:j_idt73:j_idt78"
+													class="ui-state-default ui-sortable-column"
+													role="columnheader" aria-label="Year" scope="col"><span
+													class="ui-column-title">Type de decision</span><span
+													class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th>
+											
+												
+											</tr>
+										</thead>
+										<tbody id="form:j_idt73_data"
+											class="ui-datatable-data ui-widget-content" tabindex="0">
+											<p:dataTable value="#{decisionBean.decisionsByUser}" var="d" border="1">
+												<p:column data-ri="0" data-rk="203d420b"
+													class="ui-widget-content ui-datatable-even ui-datatable-selectable"
+													role="row" aria-selected="false">
+
+													<h:outputText value="#{d.dateCreationDec}" />
+
+												</p:column>
+												<p:column data-ri="0" data-rk="203d420b"
+													class="ui-widget-content ui-datatable-even ui-datatable-selectable"
+													role="row" aria-selected="false">
+
+													<h:outputText value="#{d.score}" />
+
+
+												</p:column>
+												
+												<p:column data-ri="0" data-rk="203d420b"
+													class="ui-widget-content ui-datatable-even ui-datatable-selectable"
+													role="row" aria-selected="false">
+
+													<h:outputText value="#{d.typeDec}" />
+
+
+												</p:column>
+											
+											</p:dataTable>											
+										</tbody>
+									</table>
+			
+								</div>
+							</div>
+
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</h:form>
+		
+		
+		
+	</ui:define>
+</ui:composition>
+</html>

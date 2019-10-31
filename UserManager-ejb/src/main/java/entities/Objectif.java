@@ -27,36 +27,10 @@ public class Objectif implements Serializable {
 	private int idObjectif;
 	
 	private String name;
-	private String description;
 	
 	@OneToMany(mappedBy="objectif", 
 			cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, 
 			fetch=FetchType.EAGER)
 	private List<EvaluationSheet> evaluations = new ArrayList<>();
-	
-	public Objectif() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 
-
-	public Objectif(String name, String description) {
-		super();
-		this.name = name;
-		this.description = description;
-	}
-
-
-	public Objectif(int idObjectif, String name, String description) {
-		super();
-		this.idObjectif = idObjectif;
-		this.name = name;
-		this.description = description;
-	}
-
-
-	
-
-	
-	
 }

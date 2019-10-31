@@ -6,10 +6,12 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	template="/template/MyIndex.xhtml">
-	<ui:define name="cont">
+	xmlns:p="http://primefaces.org/ui"
+	template="/template/MyIndexEvalEmp.xhtml">
+
+   <ui:define name="cont">
+	<p:chart  type="pie" model="#{decisionBean.pieModel1}" style="width:400px;height:300px" />
 	</ui:define>
 </ui:composition>
 </html>

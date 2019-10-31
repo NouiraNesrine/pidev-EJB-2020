@@ -13,5 +13,6 @@ public interface IDecisionReferenceService {
 	public List<DecisionReference> getAllDecisionReferences();
 	public void updateDecisionReference(DecisionReference dr);
 	public void deleteDecisionReference (int id);
+	public DecisionReference getDecisionReferenceById(int id);
 	
 }

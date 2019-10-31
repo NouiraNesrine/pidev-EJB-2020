@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!-- Mirrored from www.primefaces.org/ecuador/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2019 16:29:05 GMT -->
+<!-- Added by HTTrack -->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/MyIndex.xhtml">
+	<ui:define name="cont">
+		<h:form id="form1">
+			<div class="card card-w-title">
+				<h1>Calendar</h1>
+				<div id="j_idt99"
+					class="ui-panelgrid ui-widget ui-panelgrid-blank form-group"
+					style="margin-top: 10px">
+					<div id="j_idt99_content"
+						class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+						<div class="ui-g">
+							<div class="ui-panelgrid-cell ui-g-12 ui-md-12">
+								<img id="j_idt100" alt=""
+									src="javax.faces.resource/spacer/dot_clear.gif408e.gif?ln=primefaces&amp;v=6.2" />
+							</div>
+						</div>
+
+
+
+						<div class="ui-fluid">
+							<div class="ui-g">
+								<div class="ui-g-12">
+									<div class="card card-w-title">
+
+
+										<div class="ui-g">
+											<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+												<h:outputText value="Salary"></h:outputText>
+												<h:inputText id="j_idt75" name="j_idt74" type="text"
+													placeholder="Email" value="#{contratBean.salaire}"
+													class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" />
+
+											</div>
+										</div>
+										<div class="ui-g">
+											<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+												<h:outputText value="Contract Type"></h:outputText>
+												<h:inputText id="j_idt76" name="j_idt75" type="text"
+													placeholder="isActiv"
+													class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+													value="#{contratBean.typeContrat}" />
+
+
+											</div>
+										</div>
+
+										<div class="ui-g"></div>
+
+
+										<div class="ui-g">
+											<div class="ui-panelgrid-cell ui-g-12 ui-md-12">
+												<label id="j_idt106" class="ui-outputlabel ui-widget"
+													for="button_input">Date:</label>
+											</div>
+										</div>
+
+										<div class="ui-g">
+
+											<div class="ui-panelgrid-cell ui-g-12 ui-md-12">
+												<span id="button" class="ui-calendar"> <p:calendar
+														id="inline" value="#{contratBean.dateDebut}"
+														showOn="button" />
+												</span>
+
+
+											</div>
+										</div>
+
+										<div class="ui-g">
+											<div class="ui-panelgrid-cell ui-g-12 ui-md-4">
+												<div id="j_idt90"
+													class="ui-splitbutton ui-buttonset ui-widget"
+													style="max-width: 150px;">
+
+													<span class="ui-button-text ui-c"><h:commandButton
+															id="j_idt90" name="j_idt72:add-btn"
+															class="ui-button ui-widget ui-state-default ui-corner-left ui-button-text-icon-left"
+															style="max-width: 150px;"
+															action="#{contratBean.addContrat()}" value="Save" /> 
+															<h:message for="j_idt90"></h:message>
+															</span>
+												</div>
+												<div id="j_idt90"
+													class="ui-splitbutton ui-buttonset ui-widget"
+													style="max-width: 150px;">
+
+													<span class="ui-button-text ui-c"><h:commandButton
+															id="j_idt901" name="j_idt72:add-btn-1"
+															class="ui-button ui-widget ui-state-default ui-corner-left ui-button-text-icon-left"
+															style="max-width: 150px;"
+															action="#{userBean.updateUser()}" value="Update" /> </span>
+												</div>
+
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</h:form>
+		
+		
+		<h:form id="form">
+			<div class="card card-w-title">
+
+
+
+
+
+				<p:dataGrid var="car" value="#{contratBean.contrats}" columns="3"
+					layout="grid" rows="12" paginator="true" id="cars"
+					paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+					rowsPerPageTemplate="6,12,16">
+
+					<f:facet name="header">
+            List of Contracts
+        </f:facet>
+
+					<p:panel header="#{car.typeContrat}" style="text-align:center">
+						<h:panelGrid columns="1" style="width:100%">
+
+
+							<h:outputText value="#{car.dateDebut}" />
+
+
+							<p:commandLink update=":form:carDetail"
+								oncomplete="PF('carDialog').show()" title="View Detail">
+								<i class="fa fa-search"><h:outputText
+										styleClass="pi pi-search" /></i>
+								<f:setPropertyActionListener value="#{car}"
+									target="#{contratBean.selectedCar}" />
+							</p:commandLink>
+
+						</h:panelGrid>
+
+					</p:panel>
+
+				</p:dataGrid>
+
+				<p:dialog header="Contract Info" widgetVar="carDialog" modal="true"
+					showEffect="fade" hideEffect="fade" resizable="false">
+					<p:outputPanel id="carDetail" style="text-align:center;">
+						<p:panelGrid columns="2"
+							rendered="#{not empty contratBean.selectedCar}"
+							columnClasses="label,value">
+
+							<h:outputText value="#{contratBean.selectedCar.idContrat}" type="hidden"></h:outputText>
+							<h:outputText value="Date:" />
+							<h:outputText value="#{contratBean.selectedCar.dateDebut}" />
+
+							<h:outputText value="Salary" />
+							<h:outputText value="#{contratBean.selectedCar.salaire}" />
+
+
+
+							<h:outputText value="Price" />
+							<h:outputText value="#{contratBean.selectedCar.typeContrat}" />
+						</p:panelGrid>
+
+
+						<i class="fa fa-trash"><h:commandButton
+								class="ui-button ui-widget ui-state-default ui-corner-left ui-button-text-icon-left"
+								value="delete"
+								action="#{contratBean.delContrat(contratBean.selectedCar.idContrat)}">
+							</h:commandButton></i>
+							<i class="fa fa-trash"><h:commandButton
+								class="ui-button ui-widget ui-state-default ui-corner-left ui-button-text-icon-left"
+								value="AffectContratTo"
+								action="#{contratBean.a(contratBean.selectedCar)}">
+							</h:commandButton></i>
+					</p:outputPanel>
+				</p:dialog>
+			</div>
+
+
+
+		</h:form>
+		<div class="card card-w-title">
+
+		</div>
+	</ui:define>
+</ui:composition>
+</html>

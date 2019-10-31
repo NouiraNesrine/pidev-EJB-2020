@@ -7,14 +7,11 @@ import java.util.Date;
 import java.util.List;
 
 import javax.ejb.EJB;
-import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
-import javax.faces.context.FacesContext;
 import javax.faces.model.SelectItem;
 
-import entities.Decision;
 import entities.EvaluationSheet;
 import entities.Objectif;
 import entities.User;
@@ -121,14 +118,6 @@ public class EvaluationSheetBean implements Serializable{
 		}
     
 	
-	//Generate Decision
-	public Decision generateDecision(User) {
-		
-	}
-
-	public float getNoteManager() {
-		return noteManager;
-	}
 
 	public void setNoteManager(float noteManager) {
 		this.noteManager = noteManager;
@@ -178,7 +167,7 @@ public class EvaluationSheetBean implements Serializable{
 		this.itemUserList = new ArrayList<SelectItem>();
 		itemUserList.clear();
 		
-		List<User> listUser= iusl.getAllUser();
+		List<User> listUser= iusl.getAllEmploye();
 		
 		for(User us:listUser) {
 			SelectItem selectitem = new SelectItem(us.getIdUser(), us.getLastname());

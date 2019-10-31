@@ -45,11 +45,7 @@
 			<artifactId>cdi-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.16.18</version>
-		</dependency>
+
 		<!-- Import the JPA API, we use provided scope as the API is included in 
 			JBoss WildFly -->
 		<dependency>

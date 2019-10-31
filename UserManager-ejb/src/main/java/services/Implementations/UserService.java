@@ -9,6 +9,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
 import entities.User;
+import enumerations.Role;
 import services.Interfaces.IUserServiceLocal;
 
 @Stateless
@@ -65,6 +66,11 @@ public class UserService implements IUserServiceLocal {
 				return us;
 	}
 	
+	@Override
+	public List<User> getAllEmploye() {
+		
+		return em.createQuery("SELECT u from User u where u.role='employe' ", User.class).getResultList();
+	}
 	
 
 }

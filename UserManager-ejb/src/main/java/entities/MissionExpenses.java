@@ -38,9 +38,5 @@ public class MissionExpenses implements Serializable{
 		this.mission = mission;
 		this.expenseNotes = expenseNotes;
 	}
-
-	public MissionExpenses() {
-		super();
-	}
 	
 }

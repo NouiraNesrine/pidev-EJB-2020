@@ -54,8 +54,4 @@ public class ExpenseNote implements Serializable {
 		this.accommodationExp = accommodationExp;
 	}
 
-	public ExpenseNote() {
-		super();
-	}
-
 }

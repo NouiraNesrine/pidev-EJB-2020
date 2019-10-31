@@ -22,7 +22,7 @@ public interface IEvaluationSheetService {
 	public List<EvaluationSheet> getAllEvaluationSheetByUser(int id);
 	public EvaluationSheet getEvaluationSheetByUser(User u, EvaluationSheet e);
 	public List<EvaluationSheet> getAllEvaluationSheetByObjectif(Objectif o); 
-
+	public void updateEvaluationSheet(EvaluationSheet e);
 
 
 }

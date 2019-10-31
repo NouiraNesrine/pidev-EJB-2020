@@ -37,10 +37,6 @@ public class TransportExpenses implements Serializable{
 		this.costs = costs;
 		this.boardingTicket = boardingTicket;
 	}
-
-	public TransportExpenses() {
-		super();
-	}
 	
 
 }

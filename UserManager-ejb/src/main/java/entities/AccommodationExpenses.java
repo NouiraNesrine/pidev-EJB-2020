@@ -13,8 +13,9 @@ import enumerations.AccType;
 import lombok.Getter;
 import lombok.Setter;
 
-
 @Entity
+@Getter
+@Setter
 public class AccommodationExpenses implements Serializable {
 	
 	private static final long serialVersionUID = 6003293039237941254L;
@@ -27,10 +28,6 @@ public class AccommodationExpenses implements Serializable {
 	private double costs;
 	private String accommodationBill;
 	
-	public AccommodationExpenses() {
-		super();
-	}
-
 	public AccommodationExpenses(AccType acctype, int duration, double costs, String accommodationBill) {
 		super();
 		this.acctype = acctype;

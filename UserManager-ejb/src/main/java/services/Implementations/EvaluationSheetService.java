@@ -1,6 +1,5 @@
 package services.Implementations;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.LocalBean;
@@ -48,6 +47,7 @@ public class EvaluationSheetService implements IEvaluationSheetService {
 		}
 	}
 	
+	@Override
 	public void updateEvaluationSheetParEmploye(EvaluationSheet e) {
 		
 		EvaluationSheet ev = em.find(EvaluationSheet.class, e.getEvalId());	
@@ -55,6 +55,16 @@ public class EvaluationSheetService implements IEvaluationSheetService {
 			ev.setNoteEmploye(e.getNoteEmploye());
 		}
 	}
+	
+	@Override
+	public void updateEvaluationSheet(EvaluationSheet e) {
+		
+		EvaluationSheet ev = em.find(EvaluationSheet.class, e.getEvalId());	
+		if(ev.getEvalId()==e.getEvalId()) {
+			ev.setDecision(e.getDecision());
+		}
+	}
+	
 
 	@Override
 	public void deleteEvaluationSheet(int id) {		

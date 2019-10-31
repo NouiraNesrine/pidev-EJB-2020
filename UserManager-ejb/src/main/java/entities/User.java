@@ -47,7 +47,10 @@ public class User implements Serializable {
 
 	@Column
 	private boolean isActiv;
-
+	
+	@Column
+	private String value;
+	
 	@Enumerated(EnumType.STRING)
 	@Column
 	Role role;
@@ -56,7 +59,7 @@ public class User implements Serializable {
 	private List<Skills> Userskills;
 
 	@ManyToMany(mappedBy = "UsersParticipants", cascade = CascadeType.ALL)
-	private Set<Formation> formations;
+	private List<Formation> formations;
 
 	@OneToOne(mappedBy = "user")
 	private Timesheet timesheet;
@@ -84,4 +87,43 @@ public class User implements Serializable {
 		this.role = role;
 	}
 
+	public User(int idUser, String firstname, String lastname, String email, String password, Role role) {
+		super();
+		this.idUser = idUser;
+		Firstname = firstname;
+		Lastname = lastname;
+		this.email = email;
+		this.password = password;
+		this.role = role;
+	}
+
+	public User(String firstname, String lastname, String email, String password, Role role) {
+		super();
+		Firstname = firstname;
+		Lastname = lastname;
+		this.email = email;
+		this.password = password;
+		this.role = role;
+	}
+
+	public User(int idUser, String firstname, String lastname, String email, String password, boolean isActiv,
+			Role role) {
+		super();
+		this.idUser = idUser;
+		Firstname = firstname;
+		Lastname = lastname;
+		this.email = email;
+		this.password = password;
+		this.isActiv = isActiv;
+		this.role = role;
+	}
+	
+	
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="useToCom")
+	private List<Commentaire> commentairesU;
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="useToSta")
+	private List<Statu> statusU;
+	
 }

@@ -11,6 +11,6 @@ public interface IDecisionService {
 	public Decision addDecision(Decision d);
 	public List<Decision> getAllDecisions();
 	public void deleteDecision (int id);
-	
-
+	public Decision getDecisionById (int idDecision);
+	public Decision getLastDecision();
 }
