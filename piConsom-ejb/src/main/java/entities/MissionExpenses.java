@@ -1,0 +1,88 @@
+package entities;
+
+import java.io.Serializable;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+
+@Entity
+
+public class MissionExpenses implements Serializable{
+
+	private static final long serialVersionUID = -4587602517013979931L;
+	@Id 
+	@GeneratedValue (strategy = GenerationType.IDENTITY) 
+	private int refrence;
+	private double totalRecovered;
+	private Boolean isApproved;
+	
+	@OneToOne
+	private Mission mission;
+	@OneToMany(cascade = CascadeType.ALL)
+	private List<ExpenseNote> expenseNotes;
+	
+	public MissionExpenses(double totalRecovered, Boolean isApproved, Mission mission, List<ExpenseNote> expenseNotes) {
+		super();
+		this.totalRecovered = totalRecovered;
+		this.isApproved = isApproved;
+		this.mission = mission;
+		this.expenseNotes = expenseNotes;
+	}
+
+	public MissionExpenses() {
+		super();
+	}
+
+	public int getRefrence() {
+		return refrence;
+	}
+
+	public void setRefrence(int refrence) {
+		this.refrence = refrence;
+	}
+
+	public double getTotalRecovered() {
+		return totalRecovered;
+	}
+
+	public void setTotalRecovered(double totalRecovered) {
+		this.totalRecovered = totalRecovered;
+	}
+
+	public Boolean getIsApproved() {
+		return isApproved;
+	}
+
+	public void setIsApproved(Boolean isApproved) {
+		this.isApproved = isApproved;
+	}
+
+	public Mission getMission() {
+		return mission;
+	}
+
+	public void setMission(Mission mission) {
+		this.mission = mission;
+	}
+
+	public List<ExpenseNote> getExpenseNotes() {
+		return expenseNotes;
+	}
+
+	public void setExpenseNotes(List<ExpenseNote> expenseNotes) {
+		this.expenseNotes = expenseNotes;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	
+	
+}
