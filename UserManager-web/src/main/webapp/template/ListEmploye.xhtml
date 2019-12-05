@@ -15,9 +15,7 @@
 					<p:dataList value="#{contratBean.employes}" var="c"
 						type="unordered" itemType="none" paginator="true" rows="10"
 						styleClass="paginated">
-						<f:facet name="header">
-            Paginator
-        </f:facet>
+						
 						<p:commandLink update=":myform:carDetail" class="fa fa-search"
 							oncomplete="PF('carDialog').show()" title="View Detail"
 							style="float:left;margin-right:10px;margin-top:3px; color:#333333">
@@ -25,10 +23,10 @@
 							<f:setPropertyActionListener value="#{c}"
 								target="#{contratBean.selectedEmp}" />
 						</p:commandLink>
-						<h:outputText value="#{c.firstname} " style="display:inline-block" />
+						<h:outputText value="#{c.firstname} #{c.lastname}" style="display:inline-block" />
 					</p:dataList>
 
-					<p:dialog header="Car Info" widgetVar="carDialog" modal="true"
+					<p:dialog header="Employe validation" widgetVar="carDialog" modal="true"
 						showEffect="blind" hideEffect="explode" resizable="false">
 						<p:outputPanel id="carDetail" style="text-align:center;">
 							<p:panelGrid columns="2"
@@ -41,13 +39,14 @@
 
 								<h:outputText value="Id:" />
 								<h:outputText value="#{contratBean.selectedEmp.idUser}" />
-								<span class="ui-button-text ui-c"><h:commandButton
+								
+
+							</p:panelGrid>
+							<span class="ui-button-text ui-c"><h:commandButton
 										id="j_idt217" name="j_idt216"
 										class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only secondary-button rounded-btn"
 										style="margin-bottom: 10px;" action="#{contratBean.affecte()}"
-										value="display" /></span>
-
-							</p:panelGrid>
+										value="confirm" /></span>
 						</p:outputPanel>
 					</p:dialog>
 				</div>
